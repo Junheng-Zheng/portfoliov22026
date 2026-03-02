@@ -105,7 +105,12 @@ export default function Home() {
   }, [delay]);
 
   return (
-    <div className="cursor-[url('/curs.png')_16_16,pointer]">
+    <motion.div
+      initial={{ height: "100dvh" }}
+      animate={{ height: "fit-content" }}
+      transition={{ duration: 0.5, delay: 1 }}
+      className="cursor-[url('/curs.png')_16_16,pointer] overflow-hidden"
+    >
       <div
         className={`md:w-[400px] w-full bg-black flex flex-col gap-3 ${!menuOpen && "translate-x-full"} transition-all duration-300 spacemono text-sm fixed right-0 p-6 h-full z-20`}
       >
@@ -556,7 +561,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
