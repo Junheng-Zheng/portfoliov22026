@@ -303,7 +303,7 @@ export default function Home() {
             className="object-cover object-center"
           />
         </div>
-        <div className="   bg-red-500 overflow-hidden xl:w-[50%] group xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px] w-full flex items-end justify-center  relative">
+        <div className="    overflow-hidden xl:w-[50%] group xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px] w-full flex items-end justify-center  relative">
           <motion.button
             initial={{ y: 30 }}
             animate={{ y: 0 }}
