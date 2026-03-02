@@ -164,13 +164,21 @@ export default function Home() {
               strokeWidth={1}
             />
           </Link>
-          <div className="w-full relative hover:italic overflow-hidden h-full flex items-center justify-center bg-white/8 rounded-sm p-6 ">
-            [DRIBBBLE]
-            <Dribbble
-              className="absolute bottom-1/2 right-1/2 w-80 h-80 opacity-2  translate-y-1/2 translate-x-1/2"
-              strokeWidth={1}
-            />
-          </div>
+          <Link
+            href="https://dribbble.com/junheng-zheng"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="w-full relative hover:italic overflow-hidden h-full flex items-center justify-center bg-white/8 rounded-sm p-6 cursor-pointer"
+          >
+            <div className="w-full relative hover:italic overflow-hidden h-full flex items-center justify-center bg-white/8 rounded-sm p-6 ">
+              [DRIBBBLE]
+              <Dribbble
+                className="absolute bottom-1/2 right-1/2 w-80 h-80 opacity-2  translate-y-1/2 translate-x-1/2"
+                strokeWidth={1}
+              />
+            </div>
+          </Link>
           <Link
             href="https://github.com/Junheng-Zheng?tab=overview&from=2022-12-01&to=2022-12-31"
             target="_blank"
@@ -328,12 +336,12 @@ export default function Home() {
         transition={{ duration: 0.5, delay: delay + 0.2 }}
       >
         {/* <div className = "w-full flex-1 bg-white"/> */}
-        <div className="   overflow-hidden xl:w-[50%] group  xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px]  w-full flex items-end justify-center  relative">
+        <div className=" group cursor-pointer overflow-hidden xl:w-[50%] group  xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px]  w-full flex items-end justify-center  relative">
           <motion.button
             initial={{ y: 30 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.3, delay: delay + 0.5 }}
-            className="uppercase absolute left-1/2 transition-all duration-300  -translate-x-1/2 bottom-0 text-white px-3 py-2 z-2 bg-orange-600 "
+            className="uppercase absolute group-hover:italic left-1/2 transition-all duration-300  -translate-x-1/2 bottom-0 text-white px-3 py-2 z-2 bg-orange-600 "
           >
             [Works]
           </motion.button>
@@ -349,12 +357,12 @@ export default function Home() {
             className="object-cover object-center"
           />
         </div>
-        <div className="    overflow-hidden xl:w-[50%] group xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px] w-full flex items-end justify-center  relative">
+        <div className="  group cursor-pointer  overflow-hidden xl:w-[50%] group xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px] w-full flex items-end justify-center  relative">
           <motion.button
             initial={{ y: 30 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.3, delay: delay + 0.5 }}
-            className="uppercase text-white px-3 py-2 z-2  absolute left-1/2 transition-all duration-300  -translate-x-1/2 bottom-0  bg-orange-600  "
+            className="uppercase group-hover:italic text-white px-3 py-2 z-2  absolute left-1/2 transition-all duration-300  -translate-x-1/2 bottom-0  bg-orange-600  "
           >
             [About]
           </motion.button>
