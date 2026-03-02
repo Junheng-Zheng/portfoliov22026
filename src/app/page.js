@@ -88,11 +88,14 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [delay]);
 
+  const [unlocked, setUnlocked] = useState(false);
+
   useEffect(() => {
     const t = setTimeout(
       () => {
         setLeftText("");
         setRightText("");
+        setUnlocked(true);
         setProgress("");
         setLeftTextAfter("[Resume]");
         setRightTextAfter("[Contact]");
@@ -106,10 +109,9 @@ export default function Home() {
 
   return (
     <motion.div
-      initial={{ height: "100dvh" }}
-      animate={{ height: "fit-content" }}
-      transition={{ duration: 0.5, delay: 1 }}
-      className="cursor-[url('/curs.png')_16_16,pointer] overflow-hidden"
+      initial={{ maxHeight: "100dvh" }}
+      animate={{ maxHeight: "auto" }}
+      className={`w-full  ${unlocked ? "overflow-visible" : "overflow-hidden"}`}
     >
       <div
         className={`md:w-[400px] w-full bg-black flex flex-col gap-3 ${!menuOpen && "translate-x-full"} transition-all duration-300 spacemono text-sm fixed right-0 p-6 h-full z-20`}
@@ -448,7 +450,7 @@ export default function Home() {
           <Diagram progress={textScrollProgress} />
         </div>
       </div>
-      <div className="h-dvh flex items-center gap-4 text-sm overflow-x-scroll uppercase justify-start spacemono">
+      {/* <div className="h-dvh flex items-center gap-4 text-sm overflow-x-scroll uppercase justify-start spacemono">
         <div className="flex w-fit px-8 gap-8 text-nowrap">
           <div className="flex flex-col w-fit gap-3">
             <div className="py-3 px-6 flex items-center bg-white/5 border border-white/10 justify-center gap-2">
@@ -517,7 +519,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="w-full flex flex-col gap-14 opacity-90 text-white uppercase spacemono relative bg-black text-sm">
         <div className="p-6 flex flex-col gap-6">
           <Juntext />
