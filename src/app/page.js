@@ -121,27 +121,42 @@ export default function Home() {
           </button>
         </div>
         <div className="grid grid-cols-1 gap-1 h-full">
-          <div className="w-full relative hover:italic overflow-hidden h-full flex flex-col items-center justify-center  bg-white/8 rounded-sm p-6 ">
+          <a
+            href="mailto:jz7259@g.rit.edu"
+            onClick={() => setMenuOpen(false)}
+            className="w-full relative hover:italic overflow-hidden h-full flex flex-col items-center justify-center  bg-white/8 rounded-sm p-6 cursor-pointer"
+          >
             <p className="z-2 uppercase">[EMAIL]</p>
             <Mail
               className="absolute bottom-1/2 right-1/2 w-80 h-80 opacity-2 translate-y-1/2 translate-x-1/2"
               strokeWidth={1}
             />
-          </div>
-          <div className="w-full relative hover:italic overflow-hidden h-full flex items-center justify-center bg-white/8 rounded-sm p-6 ">
+          </a>
+          <Link
+            href="https://www.linkedin.com/in/junhengzheng/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="w-full relative hover:italic overflow-hidden h-full flex items-center justify-center bg-white/8 rounded-sm p-6 cursor-pointer"
+          >
             [LINKEDIN]
             <Linkedin
               className="absolute bottom-1/2 right-1/2 w-80 h-80 opacity-2  translate-y-1/2 translate-x-1/2"
               strokeWidth={1}
             />
-          </div>
-          <div className="w-full relative hover:italic overflow-hidden h-full flex items-center justify-center bg-white/8 rounded-sm p-6 ">
+          </Link>
+          <Link
+            href="/resume.png"
+            target="_blank"
+            onClick={() => setMenuOpen(false)}
+            className="w-full relative hover:italic overflow-hidden h-full flex items-center justify-center bg-white/8 rounded-sm p-6 cursor-pointer"
+          >
             [RESUME]
             <File
               className="absolute bottom-1/2 right-1/2 w-80 h-80 opacity-2  translate-y-1/2 translate-x-1/2"
               strokeWidth={1}
             />
-          </div>
+          </Link>
           <div className="w-full relative hover:italic overflow-hidden h-full flex items-center justify-center bg-white/8 rounded-sm p-6 ">
             [DRIBBBLE]
             <Dribbble
@@ -149,20 +164,26 @@ export default function Home() {
               strokeWidth={1}
             />
           </div>
-          <div className="w-full relative hover:italic overflow-hidden h-full flex items-center justify-center bg-white/8 rounded-sm p-6 ">
+          <Link
+            href="https://github.com/Junheng-Zheng?tab=overview&from=2022-12-01&to=2022-12-31"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="w-full relative hover:italic overflow-hidden h-full flex items-center justify-center bg-white/8 rounded-sm p-6 cursor-pointer"
+          >
             [GITHUB]
             <Github
               className="absolute bottom-1/2 right-1/2 w-80 h-80 opacity-2  translate-y-1/2 translate-x-1/2"
               strokeWidth={1}
             />
-          </div>
+          </Link>
         </div>
       </div>
       <motion.div
         initial={{ maxHeight: "100dvh" }}
         animate={{ maxHeight: "fit-content" }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="w-full h-dvh  flex flex-col py-6 md:gap-10 gap-16 text-sm spacemono items-center"
+        className="w-full h-dvh  flex flex-col py-6 md:gap-10 gap-12 text-sm spacemono items-center"
       >
         <motion.div
           initial={{ opacity: 0, y: -30, height: 0 }}
@@ -201,15 +222,17 @@ export default function Home() {
             className="flex w-full px-6 gap-3 opacity-90 items-center justify-center"
           >
             <div className="w-full  hidden md:flex flex-1 gap-3 items-center uppercase justify-end">
-              <DecryptedText
-                speed={100}
-                maxIterations={15}
-                parentClassName="hover:italic"
-                className="uppercase  cursor-pointer"
-                animateOn="view"
-              >
-                {leftTextAfter}
-              </DecryptedText>
+              <Link href="/resume.png" target="_blank" className="hover:italic">
+                <DecryptedText
+                  speed={100}
+                  maxIterations={15}
+                  parentClassName="hover:italic"
+                  className="uppercase cursor-pointer"
+                  animateOn="view"
+                >
+                  {leftTextAfter}
+                </DecryptedText>
+              </Link>
               <p className="uppercase">{leftText}</p>
               <motion.div
                 initial={{ opacity: 1 }}
@@ -254,13 +277,20 @@ export default function Home() {
                 />
               </motion.div>
               <p className="uppercase">{rightText}</p>
-              <DecryptedText
-                parentClassName="hover:italic"
-                className="uppercase  cursor-pointer"
-                animateOn="view"
+              <Link
+                href="https://www.linkedin.com/in/junhengzheng/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:italic"
               >
-                {rightTextAfter}
-              </DecryptedText>
+                <DecryptedText
+                  parentClassName="hover:italic"
+                  className="uppercase cursor-pointer"
+                  animateOn="view"
+                >
+                  {rightTextAfter}
+                </DecryptedText>
+              </Link>
             </div>
           </motion.div>
         </motion.div>
@@ -271,8 +301,17 @@ export default function Home() {
           transition={{ duration: 0.5, delay: delay + 0.2 }}
           className="md:hidden flex gap-3 justify-between w-full px-6"
         >
-          <p className="uppercase">[Resume]</p>
-          <p className="uppercase">[Contact]</p>
+          <Link href="/resume.png" target="_blank" className="uppercase">
+            [Resume]
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/junhengzheng/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="uppercase"
+          >
+            [Contact]
+          </Link>
         </motion.div>
       </motion.div>
       <motion.div
@@ -393,7 +432,7 @@ export default function Home() {
           </ProjectCard> */}
         </div>
       </div>
-      <div ref={textRef} className="h-[500vh]">
+      <div ref={textRef} className="h-[300vh]">
         <div className="sticky top-0 w-full h-dvh flex items-center flex-col justify-center bg-[#131313] uppercase spacemono text-sm text-center">
           <div className="w-full h-full flex items-center justify-center">
             <ScrollRevealText progress={textScrollProgress}>
@@ -404,13 +443,101 @@ export default function Home() {
           <Diagram progress={textScrollProgress} />
         </div>
       </div>
+      <div className="h-dvh flex items-center gap-4 text-sm overflow-x-scroll uppercase justify-start spacemono">
+        <div className="flex w-fit px-8 gap-8 text-nowrap">
+          <div className="flex flex-col w-fit gap-3">
+            <div className="py-3 px-6 flex items-center bg-white/5 border border-white/10 justify-center gap-2">
+              [D&D Motor Systems]
+              <p className="opacity-50 text-xs">Fall 2024</p>
+            </div>
+            <p className="w-full text-wrap text-xs opacity-50 text-left">
+              My First Internship at a local company. I worked on web redesign
+              and analytics, really learning the basics of both design and
+              development.
+            </p>
+          </div>
+          <div className="flex flex-col w-fit gap-3">
+            <div className="py-3 px-6 flex items-center bg-white/5 border border-white/10 justify-center gap-2">
+              [D&D Motor Systems]
+              <p className="opacity-50 text-xs">Fall 2024</p>
+            </div>
+            <p className="w-full text-wrap text-xs opacity-50 text-left">
+              My First Internship at a local company. I worked on web redesign
+              and analytics, really learning the basics of both design and
+              development.
+            </p>
+          </div>
+          <div className="flex flex-col w-fit gap-3">
+            <div className="py-3 px-6 flex items-center bg-white/5 border border-white/10 justify-center gap-2">
+              [D&D Motor Systems]
+              <p className="opacity-50 text-xs">Fall 2024</p>
+            </div>
+            <p className="w-full text-wrap text-xs opacity-50 text-left">
+              My First Internship at a local company. I worked on web redesign
+              and analytics, really learning the basics of both design and
+              development.
+            </p>
+          </div>
+          <div className="flex flex-col w-fit gap-3">
+            <div className="py-3 px-6 flex items-center bg-white/5 border border-white/10 justify-center gap-2">
+              [D&D Motor Systems]
+              <p className="opacity-50 text-xs">Fall 2024</p>
+            </div>
+            <p className="w-full text-wrap text-xs opacity-50 text-left">
+              My First Internship at a local company. I worked on web redesign
+              and analytics, really learning the basics of both design and
+              development.
+            </p>
+          </div>
+          <div className="flex flex-col w-fit gap-3">
+            <div className="py-3 px-6 flex items-center bg-white/5 border border-white/10 justify-center gap-2">
+              [D&D Motor Systems]
+              <p className="opacity-50 text-xs">Fall 2024</p>
+            </div>
+            <p className="w-full text-wrap text-xs opacity-50 text-left">
+              My First Internship at a local company. I worked on web redesign
+              and analytics, really learning the basics of both design and
+              development.
+            </p>
+          </div>
+          <div className="flex flex-col w-fit gap-3">
+            <div className="py-3 px-6 flex items-center bg-white/5 border border-white/10 justify-center gap-2">
+              [D&D Motor Systems]
+              <p className="opacity-50 text-xs">Fall 2024</p>
+            </div>
+            <p className="w-full text-wrap text-xs opacity-50 text-left">
+              My First Internship at a local company. I worked on web redesign
+              and analytics, really learning the basics of both design and
+              development.
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="w-full flex flex-col gap-14 opacity-90 text-white uppercase spacemono relative bg-black text-sm">
         <div className="p-6 flex flex-col gap-6">
           <Juntext />
           <div className="flex w-full  gap-3 opacity-90  uppercase items-center justify-between ">
-            <p className="uppercase">[Resume]</p>
-            <p className="uppercase">[Email]</p>
-            <p className="uppercase">[LinkedIn]</p>
+            <Link
+              href="/resume.png"
+              target="_blank"
+              className="uppercase hover:italic"
+            >
+              [Resume]
+            </Link>
+            <a
+              href="mailto:jz7259@g.rit.edu"
+              className="uppercase hover:italic"
+            >
+              [Email]
+            </a>
+            <Link
+              href="https://www.linkedin.com/in/junhengzheng/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="uppercase hover:italic"
+            >
+              [LinkedIn]
+            </Link>
           </div>
         </div>
         {/* <Image src="/bridge.png" alt="hero" fill className="object-cover object-center opacity-10" /> */}
