@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.spacemono{
+  font-family: "Space Mono", monospace;
+}
+
+.spacegrotesk{
+  font-family: "Space Grotesk", sans-serif;
+}
