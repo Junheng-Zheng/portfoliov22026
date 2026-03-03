@@ -2,16 +2,14 @@
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import DecryptedText from "./DecryptedText";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useMotionValueEvent,
-} from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { Mail, Linkedin, File, Github, Dribbble } from "lucide-react";
 import Link from "next/link";
 import Juntext from "./components/Juntext";
 import Footer from "./components/Footer";
+import ScrollRevealText from "./components/ScrollRevealText";
+import ProjectCard from "./components/ProjectCard";
+import Diagram from "./components/Diagram";
 
 export default function Home() {
   const [progress, setProgress] = useState("[0%]");
@@ -397,7 +395,7 @@ export default function Home() {
             src="/bridge.png"
             alt="hero"
             fill
-            className="object-cover object-center opacity-20"
+            className="object-cover object-center opacity-15"
           />
           <ProjectCard
             progress={scrollYProgress}
@@ -449,13 +447,6 @@ export default function Home() {
             title="[Figma Studies]"
             description="Daily 30 minute Figma designs given a prompt"
           ></ProjectCard>
-          {/* <ProjectCard
-            progress={scrollYProgress}
-            range={[0.7, 0.8]}
-            className="md:col-span-2"
-          >
-            [Figma Studies]
-          </ProjectCard> */}
         </div>
       </div>
       <div ref={textRef} className="h-[300vh]">
@@ -539,336 +530,77 @@ export default function Home() {
           </div>
         </div>
       </div> */}
+      {/* <div className="h-dvh flex flex-col gap-12 items-center justify-center mono text-sm relative uppercase spacemono">
+        <Image
+          src="/bridge.png"
+          alt="hero"
+          fill
+          className="object-cover object-center opacity-2"
+        />
+        <div className="w-full h-fit flex flex-col relative  justify-center items-center">
+          <p>
+            What <span className="text-orange-600">others</span> have to say.
+          </p>
+        </div>
+        <div className="w-full  h-fit">
+          <TableRow delay={0.2}>
+            Eric Schoeberlein [UX Director @ Liberty Mutual]
+          </TableRow>
+          <TableRow delay={0.3}>
+            Matt Neill [Senior Designer @ Liberty Mutual]
+          </TableRow>
+          <TableRow delay={0.4}>
+            Kolbe Yang [Design Engineer @ Laminar]
+          </TableRow>
+          <TableRow delay={0.5}>
+            Alexander Dieroff [VP of Engineering @ D&D Motor Systems]
+          </TableRow>
+          <TableRow delay={0.6}>
+            Gene Luen Yang [Award Winning Author (Client)]
+          </TableRow>
+          <TableRow delay={0.7}>
+            Sai [Founder of Tiger Snack Box (Client)]
+          </TableRow>
+        </div>
+      </div> */}
       <Footer />
     </motion.div>
   );
 }
 
-const TableRow = ({ border = true }) => {
+const TableRow = ({ border = true, children, delay }) => {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (!cardRef.current) return;
+
+    const x = (Math.random() - 0.5) * 500; // horizontal jitter
+    const y = (Math.random() - 0.5) * 300; // vertical jitter
+
+    cardRef.current.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+  }, []);
+
   return (
-    <div
-      className={`opacity-70 hover:italic cursor-pointer group  hover:opacity-100 transition-opacity duration-300 w-full flex items-center h-fit  ${border ? "border-b border-white/50" : ""}`}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, delay: delay }}
+      className={`relative opacity-70 h-fit group hover:bg-[#1f1f1f] cursor-pointer hover:opacity-100 w-full flex items-center ${
+        border ? "border-b border-white/20" : ""
+      }`}
     >
-      {/* <div className = "flex-2 py-2 border-r border-white/50 px-6">Kolbe Yang (SWE @ Laminar)</div> */}
-      <div className="flex-6 py-2  border-white/50 px-6 ">
+      <div className="flex-2 py-3 text-center group-hover:italic  border-white/50 px-6">
+        {children}
+      </div>
+
+      <div
+        ref={cardRef}
+        style={{ transform: "translate(-50%, -50%)" }}
+        className="pointer-events-none absolute left-1/2 top-1/2 w-[400px] uppercase flex flex-col gap-4 bg-[#1f1f1f] p-4 text-xs border border-white/10 opacity-0 group-hover:opacity-100 scale-80 group-hover:scale-100 z-50"
+      >
         &quot;It&apos;s rare to see a designer who can code and code who can
         design.&quot;
       </div>
-    </div>
-  );
-};
-
-function ProjectCard({
-  title,
-  description,
-  children,
-  progress,
-  range,
-  className = "",
-  image = "",
-  href = "",
-}) {
-  const [start] = range;
-
-  // One-way activation
-  const isActive = useTransform(progress, (v) => (v >= start ? 1 : 0));
-  const [active, setActive] = useState(false);
-
-  useMotionValueEvent(progress, "change", (v) => {
-    if (v >= start) setActive(true);
-    else setActive(false);
-  });
-  return (
-    <motion.div style={{ opacity: isActive }} className={`relative z-20 `}>
-      <Link
-        href={href}
-        className={`w-full h-full flex flex-col bg-[#1f1f1f] group items-center md:items-start z-20 gap-4 xl:p-5 spacemono text-sm justify-center text-white uppercase ${className}`}
-      >
-        <p className="text-xs opacity-20 hidden xl:block">{title}</p>
-        {image && (
-          <div className="w-full h-full xl:aspect-16/10 overflow-hidden  xl:rounded-sm relative">
-            <Image
-              src={image}
-              alt="hero"
-              fill
-              className="object-cover group-hover:scale-105 transition-all duration-300 object-center"
-            />
-          </div>
-        )}
-        <p className="text-xs opacity-20 w-full text-right xl:block hidden">
-          {description}
-        </p>
-        {children && <p className="relative z-10">{children}</p>}
-      </Link>
     </motion.div>
   );
-}
-
-function ScrollRevealText({ children, progress }) {
-  const words = children.split(" ");
-  let charIndex = 0;
-  const totalChars = children.length;
-
-  return (
-    <p className="xl:w-1/3 w-full px-4 flex flex-wrap justify-center leading-relaxed text-center">
-      {words.map((word, w) => (
-        <span key={w} className="whitespace-nowrap mr-1">
-          {word.split("").map((char, i) => {
-            const start = charIndex / (totalChars - 1);
-            const end = start + 0.05;
-            charIndex++;
-
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            const color = useTransform(
-              progress,
-              [start, end, 1],
-              ["rgb(130,130,130)", "rgb(255,255,255)", "rgb(255,255,255)"],
-              { clamp: true },
-            );
-
-            return (
-              <motion.span key={i} style={{ color }}>
-                {char}
-              </motion.span>
-            );
-          })}
-        </span>
-      ))}
-    </p>
-  );
-}
-
-const Diagram = ({ progress }) => {
-  if (!progress) return null;
-
-  // TEXT COLORS
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const discoveryColor = useTransform(
-    progress,
-    [0.05, 0.15, 1],
-    ["rgb(130,130,130)", "#fff", "#fff"],
-  );
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const defineColor = useTransform(
-    progress,
-    [0.25, 0.35, 1],
-    ["rgb(130,130,130)", "#fff", "#fff"],
-  );
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const designColor = useTransform(
-    progress,
-    [0.45, 0.55, 1],
-    ["rgb(130,130,130)", "#fff", "#fff"],
-  );
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const developmentColor = useTransform(
-    progress,
-    [0.65, 0.75, 1],
-    ["rgb(130,130,130)", "#fff", "#fff"],
-  );
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const deploymentColor = useTransform(
-    progress,
-    [0.85, 0.95, 1],
-    ["rgb(130,130,130)", "#fff", "#fff"],
-  );
-
-  // LINE SEQUENCES (left then right)
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const discoveryLeft = useTransform(progress, [0.0, 0.075], [0, 1]);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const discoveryRight = useTransform(progress, [0.075, 0.15], [0, 1]);
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const defineLeft = useTransform(progress, [0.2, 0.275], [0, 1]);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const defineRight = useTransform(progress, [0.275, 0.35], [0, 1]);
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const designLeft = useTransform(progress, [0.4, 0.475], [0, 1]);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const designRight = useTransform(progress, [0.475, 0.55], [0, 1]);
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const developmentLeft = useTransform(progress, [0.6, 0.675], [0, 1]);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const developmentRight = useTransform(progress, [0.675, 0.75], [0, 1]);
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const deploymentLeft = useTransform(progress, [0.8, 0.875], [0, 1]);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const deploymentRight = useTransform(progress, [0.875, 0.95], [0, 1]);
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const discoveryRotate = useTransform(
-    [discoveryLeft, discoveryRight],
-    ([l, r]) => (l + r) * 45,
-  );
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const defineRotate = useTransform(
-    [defineLeft, defineRight],
-    ([l, r]) => (l + r) * 45,
-  );
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const designRotate = useTransform(
-    [designLeft, designRight],
-    ([l, r]) => (l + r) * 45,
-  );
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const developmentRotate = useTransform(
-    [developmentLeft, developmentRight],
-    ([l, r]) => (l + r) * 45,
-  );
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const deploymentRotate = useTransform(
-    [deploymentLeft, deploymentRight],
-    ([l, r]) => (l + r) * 45,
-  );
-  return (
-    <div className="w-full flex h-2/3 border-t border-white/5 p-4 gap-4 flex-col">
-      {/* TOP VISUAL */}
-      <div className="w-full xl:h-[200px] flex items-center justify-center overflow-hidden bg-black rounded-sm xl:opacity-30 opacity-50">
-        <div className="w-full h-full flex items-end  opacity-50">
-          <motion.div
-            style={{ rotate: discoveryRotate }}
-            className="w-full aspect-square  relative "
-          >
-            <Image
-              src="/diagram/discovery.png"
-              alt="hero"
-              fill
-              className="object-cover object-center"
-            />
-          </motion.div>
-        </div>
-        <div className="w-full h-full opacity-50">
-          <motion.div
-            style={{ rotate: defineRotate }}
-            className="w-full aspect-square  relative "
-          >
-            <Image
-              src="/diagram/define.png"
-              alt="hero"
-              fill
-              className="object-cover object-center"
-            />
-          </motion.div>
-        </div>
-        <div className="w-full h-full opacity-50 flex items-end">
-          <motion.div
-            style={{ rotate: designRotate }}
-            className="w-full aspect-square  relative "
-          >
-            <Image
-              src="/diagram/designing.png"
-              alt="hero"
-              fill
-              className="object-cover object-center"
-            />
-          </motion.div>
-        </div>
-      </div>
-
-      {/* TOP ROW */}
-      <div className="flex items-center w-full justify-center">
-        <div className="flex items-center w-full">
-          <Line fill={discoveryLeft} />
-          <motion.p
-            style={{ color: discoveryColor }}
-            className="px-1 uppercase"
-          >
-            [Discovery]
-          </motion.p>
-          <Line fill={discoveryRight} />
-        </div>
-
-        <div className="flex items-center w-full">
-          <Line fill={defineLeft} />
-          <motion.p style={{ color: defineColor }} className="px-1 uppercase">
-            [Define]
-          </motion.p>
-          <Line fill={defineRight} />
-        </div>
-
-        <div className="flex items-center w-full">
-          <Line fill={designLeft} />
-          <motion.p style={{ color: designColor }} className="px-1 uppercase">
-            [Design]
-          </motion.p>
-          <Line fill={designRight} />
-        </div>
-      </div>
-
-      {/* CONNECTOR */}
-      <div className="flex flex-col items-center">
-        <div className="h-5 xl:w-1/4 w-1/2 border-b border-r border-orange-600 translate-y-[0.5px] border-dashed translate-x-1/2 rounded-br-sm" />
-        <div className="h-5 xl:w-1/4 w-1/2 border-t border-l border-orange-600 translate-y-[-0.5px] border-dashed -translate-x-1/2 rounded-tl-sm" />
-      </div>
-
-      {/* BOTTOM VISUAL */}
-      <div className="w-full xl:h-[200px] flex items-center justify-around overflow-hidden bg-black rounded-sm xl:opacity-30 opacity-50">
-        <div className="w-1/3 h-full opacity-50 flex items-center">
-          <motion.div
-            style={{ rotate: developmentRotate }}
-            className="w-full aspect-square  relative "
-          >
-            <Image
-              src="/diagram/designing.png"
-              alt="hero"
-              fill
-              className="object-cover object-center"
-            />
-          </motion.div>
-        </div>
-        <div className="w-1/3 h-full opacity-50 flex items-center">
-          <motion.div
-            style={{ rotate: deploymentRotate }}
-            className="w-full aspect-square  relative "
-          >
-            <Image
-              src="/diagram/define.png"
-              alt="hero"
-              fill
-              className="object-cover object-center"
-            />
-          </motion.div>
-        </div>
-      </div>
-
-      {/* BOTTOM ROW */}
-      <div className="flex items-center w-full justify-center">
-        <div className="flex items-center w-full">
-          <Line fill={developmentLeft} />
-          <motion.p
-            style={{ color: developmentColor }}
-            className="px-1 uppercase"
-          >
-            [Development]
-          </motion.p>
-          <Line fill={developmentRight} />
-        </div>
-        <div className="flex items-center w-full">
-          <Line fill={deploymentLeft} />
-          <motion.p
-            style={{ color: deploymentColor }}
-            className="px-1 uppercase"
-          >
-            [Deployment]
-          </motion.p>
-          <Line fill={deploymentRight} />
-        </div>
-      </div>
-    </div>
-  );
 };
-
-const Line = ({ fill }) => (
-  <div className="relative w-full h-px bg-white/20 overflow-hidden">
-    <motion.div
-      style={{ scaleX: fill }}
-      className="absolute inset-0 origin-left bg-white"
-    />
-  </div>
-);
