@@ -556,7 +556,7 @@ function ProjectCard({
     <motion.div style={{ opacity: isActive }} className={`relative z-20 `}>
       <Link
         href={href}
-        className={`w-full h-full flex flex-col bg-[#1f1f1f] group ${active ? "cursor-[url('/hand.png')_16_16,pointer]" : "cursor-[url('/curs.png')_16_16,pointer]"} items-center md:items-start z-20 gap-4 xl:p-5 spacemono text-sm justify-center text-white uppercase ${className}`}
+        className={`w-full h-full flex flex-col bg-[#1f1f1f] group items-center md:items-start z-20 gap-4 xl:p-5 spacemono text-sm justify-center text-white uppercase ${className}`}
       >
         <p className="text-xs opacity-20 hidden xl:block">{title}</p>
         {image && (
