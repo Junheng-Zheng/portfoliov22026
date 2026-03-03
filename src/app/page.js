@@ -378,6 +378,7 @@ export default function Home() {
             range={[0.1, 0.25]}
             image="/project/lmi.png"
             title="[LIBERTY MUTUAL]"
+            href="/works/liberty-mutual"
             description="Design Engineer on the EUI team, Summer 2025"
           ></ProjectCard>
           <ProjectCard
