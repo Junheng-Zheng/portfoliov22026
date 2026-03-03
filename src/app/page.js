@@ -319,15 +319,26 @@ export default function Home() {
         transition={{ duration: 0.5, delay: delay + 0.2 }}
       >
         {/* <div className = "w-full flex-1 bg-white"/> */}
-        <div className=" group cursor-pointer overflow-hidden xl:w-[50%] group  xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px]  w-full flex items-end justify-center  relative">
-          <motion.button
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={() =>
+            ref.current?.scrollIntoView({ behavior: "smooth", block: "end" })
+          }
+          onKeyDown={(e) =>
+            e.key === "Enter" &&
+            ref.current?.scrollIntoView({ behavior: "smooth", block: "end" })
+          }
+          className=" group cursor-pointer overflow-hidden xl:w-[50%] group  xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px]  w-full flex items-end justify-center  relative"
+        >
+          <motion.span
             initial={{ y: 30 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.3, delay: delay + 0.5 }}
             className="uppercase absolute group-hover:italic left-1/2 transition-all duration-300  -translate-x-1/2 bottom-0 text-white px-3 py-2 z-2 bg-orange-600 "
           >
             [Works]
-          </motion.button>
+          </motion.span>
           <div className="absolute top-0 left-0 flex w-full h-full justify-between">
             {Array.from({ length: 256 }).map((_, i) => (
               <div key={i} className="w-px z-1 h-full bg-white/5"></div>
@@ -340,15 +351,21 @@ export default function Home() {
             className="object-cover object-center"
           />
         </div>
-        <div className="  group cursor-pointer  overflow-hidden xl:w-[50%] group xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px] w-full flex items-end justify-center  relative">
-          <motion.button
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={() => textRef.current?.scrollIntoView({ behavior: "smooth", block: "end" })}
+          onKeyDown={(e) => e.key === "Enter" && textRef.current?.scrollIntoView({ behavior: "smooth", block: "end" })}
+          className="  group cursor-pointer  overflow-hidden xl:w-[50%] group xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px] w-full flex items-end justify-center  relative"
+        >
+          <motion.span
             initial={{ y: 30 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.3, delay: delay + 0.5 }}
             className="uppercase group-hover:italic text-white px-3 py-2 z-2  absolute left-1/2 transition-all duration-300  -translate-x-1/2 bottom-0  bg-orange-600  "
           >
             [About]
-          </motion.button>
+          </motion.span>
           <div className="absolute top-0 left-0 flex w-full h-full justify-between">
             {Array.from({ length: 256 }).map((_, i) => (
               <div key={i} className="w-px z-1 h-full bg-white/5"></div>
