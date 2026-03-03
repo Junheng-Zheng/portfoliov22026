@@ -154,13 +154,11 @@ export default function Home() {
             onClick={() => setMenuOpen(false)}
             className="w-full relative hover:italic overflow-hidden h-full flex items-center justify-center bg-white/8 rounded-sm p-6 cursor-pointer"
           >
-            <div className="w-full relative hover:italic overflow-hidden h-full flex items-center justify-center bg-white/8 rounded-sm p-6 ">
-              [DRIBBBLE]
-              <Dribbble
-                className="absolute bottom-1/2 right-1/2 w-80 h-80 opacity-2  translate-y-1/2 translate-x-1/2"
-                strokeWidth={1}
-              />
-            </div>
+            [DRIBBBLE]
+            <Dribbble
+              className="absolute bottom-1/2 right-1/2 w-80 h-80 opacity-2  translate-y-1/2 translate-x-1/2"
+              strokeWidth={1}
+            />
           </Link>
           <Link
             href="https://github.com/Junheng-Zheng?tab=overview&from=2022-12-01&to=2022-12-31"
@@ -354,8 +352,19 @@ export default function Home() {
         <div
           role="button"
           tabIndex={0}
-          onClick={() => textRef.current?.scrollIntoView({ behavior: "smooth", block: "end" })}
-          onKeyDown={(e) => e.key === "Enter" && textRef.current?.scrollIntoView({ behavior: "smooth", block: "end" })}
+          onClick={() =>
+            textRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "end",
+            })
+          }
+          onKeyDown={(e) =>
+            e.key === "Enter" &&
+            textRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "end",
+            })
+          }
           className="  group cursor-pointer  overflow-hidden xl:w-[50%] group xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px] w-full flex items-end justify-center  relative"
         >
           <motion.span
