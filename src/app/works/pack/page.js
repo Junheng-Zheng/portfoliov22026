@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 const Pack = () => {
   return (
     <div className="flex flex-col gap-4 py-6  spacemono">
-      <div className="flex flex-col px-6 text-sm opacity-90  uppercase gap-8">
+      <div className="flex flex-col px-6 text-sm opacity-90  uppercase gap-7">
         <Link className="cursor-pointer text-xs  hover:italic" href="/">
           [Back to Home]
         </Link>
