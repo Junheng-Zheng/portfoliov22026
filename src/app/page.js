@@ -327,7 +327,7 @@ export default function Home() {
             e.key === "Enter" &&
             ref.current?.scrollIntoView({ behavior: "smooth", block: "end" })
           }
-          className=" group cursor-pointer overflow-hidden xl:w-[50%] group  xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px]  w-full flex items-end justify-center  relative"
+          className=" group cursor-pointer overflow-hidden xl:w-[50%] group xl:h-[58dvh]  lg:h-[440px] md:h-[360px]  h-[240px]  w-full flex items-end justify-center  relative"
         >
           <motion.span
             initial={{ y: 30 }}
@@ -365,7 +365,7 @@ export default function Home() {
               block: "end",
             })
           }
-          className="  group cursor-pointer  overflow-hidden xl:w-[50%] group xl:h-[480px] lg:h-[440px] md:h-[360px]  h-[240px] w-full flex items-end justify-center  relative"
+          className="  group cursor-pointer  overflow-hidden xl:w-[50%] group xl:h-[58dvh] lg:h-[440px] md:h-[360px]  h-[240px] w-full flex items-end justify-center  relative"
         >
           <motion.span
             initial={{ y: 30 }}
