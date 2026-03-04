@@ -530,7 +530,7 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-      <div className="h-dvh flex flex-col gap-8 items-center justify-center mono text-sm relative uppercase spacemono">
+      {/* <div className="h-dvh flex flex-col gap-8 items-center justify-center mono text-sm relative uppercase spacemono">
         <Image
           src="/bridge.png"
           alt="hero"
@@ -577,7 +577,7 @@ export default function Home() {
             SWE Fellowship @ Headstarter ✳ Summer 2024
           </TableRow>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </motion.div>
   );
