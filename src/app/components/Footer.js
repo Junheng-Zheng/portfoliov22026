@@ -38,7 +38,7 @@ const Footer = () => {
          </div> */}
       <div className="flex flex-col gap-3 md:flex-row items-center p-6 justify-between">
         <p>All rights reserved. Junheng Zheng 2026</p>
-        <button className="uppercase hover:italic cursor-pointer text-white px-3 py-2 z-2 bg-orange-600  ">
+        <button className="uppercase hover:italic cursor-pointer text-white   ">
           [Back to Top]
         </button>
       </div>

@@ -530,77 +530,85 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-      {/* <div className="h-dvh flex flex-col gap-12 items-center justify-center mono text-sm relative uppercase spacemono">
+      <div className="h-dvh flex flex-col gap-8 items-center justify-center mono text-sm relative uppercase spacemono">
         <Image
           src="/bridge.png"
           alt="hero"
           fill
           className="object-cover object-center opacity-2"
         />
-        <div className="w-full h-fit flex flex-col relative  justify-center items-center">
-          <p>
-            What <span className="text-orange-600">others</span> have to say.
-          </p>
+        <div className="w-full h-fit flex flex-col relative gap-3  justify-center items-center">
+          <h2 className="text-2xl font-bold spacegrotesk">Experience</h2>
         </div>
         <div className="w-full  h-fit">
-          <TableRow delay={0.2}>
-            Eric Schoeberlein [UX Director @ Liberty Mutual]
+          <TableRow
+            delay={0}
+            position="left-20 group-hover:rotate-3  "
+            info="Working on various projects for clients. Basically living off energy drinks 🫩"
+          >
+            Freelance w/ various clients ✳ Current
           </TableRow>
-          <TableRow delay={0.3}>
-            Matt Neill [Senior Designer @ Liberty Mutual]
+          <TableRow
+            delay={0}
+            position="right-20 group-hover:-rotate-3 "
+            info="Worked on the internal design system team and got to experience corporate culture. Great Internship and made a ton of impact. 🗽"
+          >
+            Design Engineer @ LMI ✳ Summer 2025
           </TableRow>
-          <TableRow delay={0.4}>
-            Kolbe Yang [Design Engineer @ Laminar]
+          <TableRow
+            delay={0.1}
+            position="left-30 group-hover:-rotate-3 "
+            info="Worked on the UX/UI for a mobile game commissioned by Tiger Snack Box. It was great learning about the mobile game development process. 🎮"
+          >
+            UX Designer @ Tiger Snack Box ✳ Spring 2025
           </TableRow>
-          <TableRow delay={0.5}>
-            Alexander Dieroff [VP of Engineering @ D&D Motor Systems]
+          <TableRow
+            delay={0.2}
+            position="right-30 group-hover:rotate-3 "
+            info="My first internship at a local company! Was a very start up like experience, and really got to leverage both design and development skills in a real world setting. 🚀"
+          >
+            Design Engineer @ D&D Motor Systems ✳ Winter 2024
           </TableRow>
-          <TableRow delay={0.6}>
-            Gene Luen Yang [Award Winning Author (Client)]
-          </TableRow>
-          <TableRow delay={0.7}>
-            Sai [Founder of Tiger Snack Box (Client)]
+          <TableRow
+            delay={0.2}
+            position="left-40 group-hover:-rotate-5 "
+            info="Learned from mentors from FAANG companies and built a strong foundation in software engineering. 💻"
+          >
+            SWE Fellowship @ Headstarter ✳ Summer 2024
           </TableRow>
         </div>
-      </div> */}
+      </div>
       <Footer />
     </motion.div>
   );
 }
 
-const TableRow = ({ border = true, children, delay }) => {
-  const cardRef = useRef(null);
-
-  useEffect(() => {
-    if (!cardRef.current) return;
-
-    const x = (Math.random() - 0.5) * 500; // horizontal jitter
-    const y = (Math.random() - 0.5) * 300; // vertical jitter
-
-    cardRef.current.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
-  }, []);
-
+const TableRow = ({ border = true, children, delay, position, info }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: delay }}
+      transition={{ duration: 0.3, delay: delay, once: true }}
       className={`relative opacity-70 h-fit group hover:bg-[#1f1f1f] cursor-pointer hover:opacity-100 w-full flex items-center ${
         border ? "border-b border-white/20" : ""
       }`}
     >
-      <div className="flex-2 py-3 text-center group-hover:italic  border-white/50 px-6">
+      <div className="flex-2 py-3 text-center group-hover:italic  border-white/50 px-4">
         {children}
       </div>
-
       <div
+        className={`absolute top-1/2 group-hover:opacity-100 opacity-0 scale-75 ${position} group-hover:scale-100 shadow-lg w-[300px] z-20 transition-all duration-300 -translate-y-1/2 p-3 text-xs  bg-[#1f1f1f]`}
+      >
+        {info}
+      </div>
+      {/* <div
         ref={cardRef}
         style={{ transform: "translate(-50%, -50%)" }}
         className="pointer-events-none absolute left-1/2 top-1/2 w-[400px] uppercase flex flex-col gap-4 bg-[#1f1f1f] p-4 text-xs border border-white/10 opacity-0 group-hover:opacity-100 scale-80 group-hover:scale-100 z-50"
       >
         &quot;It&apos;s rare to see a designer who can code and code who can
         design.&quot;
-      </div>
+      </div> */}
     </motion.div>
   );
 };
