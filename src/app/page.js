@@ -589,7 +589,7 @@ const TableRow = ({ border = true, children, delay, position, info }) => {
         {children}
       </div>
       <div
-        className={`absolute top-1/2 group-hover:opacity-100 opacity-0 scale-75 ${position} group-hover:scale-100 shadow-lg w-[300px] z-20 transition-all duration-300 -translate-y-1/2 p-3 text-xs  bg-[#1f1f1f]`}
+        className={`absolute top-1/2 group-hover:opacity-100 opacity-0 hidden lg:block scale-75 ${position} group-hover:scale-100 shadow-lg w-[300px] z-20 transition-all duration-300 -translate-y-1/2 p-3 text-xs  bg-[#1f1f1f]`}
       >
         {info}
       </div>
