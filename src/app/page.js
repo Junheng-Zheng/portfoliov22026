@@ -49,17 +49,6 @@ export default function Home() {
   });
   useEffect(() => {
     const interval = setInterval(() => {
-      setProgress((prev) => {
-        const value = parseInt(prev.replace("[", "").replace("]", ""), 10);
-
-        if (value >= 100) {
-          clearInterval(interval);
-          return "[100%]";
-        }
-
-        return `[${value + 1}%]`;
-      });
-
       setProgressValue((prev) => {
         if (prev >= 100) return 100;
         return prev + 1;
@@ -69,24 +58,27 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [delay]);
 
+  useEffect(() => {
+    setProgress(`[${progressValue}%]`);
+  }, [progressValue]);
+
   const [unlocked, setUnlocked] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(
-      () => {
-        setLeftText("");
-        setRightText("");
-        setUnlocked(true);
-        setProgress("");
-        setLeftTextAfter("[Resume]");
-        setRightTextAfter("[Contact]");
-        setProgressAfter("Multidisciplinary Designer and Developer ");
-      },
-      delay * 1000 + 0.3 * 1000,
-    );
+    if (progressValue < 100 || unlocked) return;
+
+    const t = setTimeout(() => {
+      setLeftText("");
+      setRightText("");
+      setUnlocked(true);
+      setProgress("");
+      setLeftTextAfter("[Resume]");
+      setRightTextAfter("[Contact]");
+      setProgressAfter("Multidisciplinary Designer and Developer ");
+    }, 700); // small pause after reaching 100%
 
     return () => clearTimeout(t);
-  }, [delay]);
+  }, [progressValue, unlocked]);
 
   return (
     <motion.div
