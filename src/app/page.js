@@ -75,10 +75,10 @@ export default function Home() {
       setLeftTextAfter("[Resume]");
       setRightTextAfter("[Contact]");
       setProgressAfter("Multidisciplinary Designer and Developer ");
-    }, 700); // small pause after reaching 100%
+    }, delay * 1000); // use same 0.8s pause if you like
 
     return () => clearTimeout(t);
-  }, [progressValue, unlocked]);
+  }, [progressValue, unlocked, delay]);
 
   return (
     <motion.div
