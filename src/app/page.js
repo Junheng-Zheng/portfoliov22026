@@ -522,7 +522,7 @@ export default function Home() {
           </div>
         </div>
       </div> */}
-      {/* <div className="h-dvh flex flex-col gap-8 items-center justify-center mono text-sm relative uppercase spacemono">
+      <div className="h-dvh flex flex-col gap-8 items-center justify-center mono text-sm relative uppercase spacemono">
         <Image
           src="/bridge.png"
           alt="hero"
@@ -559,17 +559,17 @@ export default function Home() {
             position="right-30 group-hover:rotate-3 "
             info="My first internship at a local company! Was a very start up like experience, and really got to leverage both design and development skills in a real world setting. 🚀"
           >
-            Design Engineer @ D&D Motor Systems ✳ Winter 2024
+            SWE @ D&D Motor Systems ✳ Fall 2024
           </TableRow>
           <TableRow
             delay={0.2}
             position="left-40 group-hover:-rotate-5 "
             info="Learned from mentors from FAANG companies and built a strong foundation in software engineering. 💻"
           >
-            SWE Fellowship @ Headstarter ✳ Summer 2024
+            SWE @ Headstarter ✳ Summer 2024
           </TableRow>
         </div>
-      </div> */}
+      </div>
       <Footer />
     </motion.div>
   );
