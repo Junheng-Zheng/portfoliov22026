@@ -168,7 +168,7 @@ export default function Home() {
       <motion.div
         initial={{ minHeight: "100dvh", height: "100dvh" }}
         animate={{ minHeight: "fit-content", height: "fit-content" }}
-        transition={{ duration: 0.5, delay: 1 }}
+        transition={{ duration: 0.5, delay: delay + 0.2 }}
         className="w-full  flex flex-col py-6 md:gap-10 gap-12 text-sm spacemono items-center"
       >
         <motion.div
