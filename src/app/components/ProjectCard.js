@@ -39,7 +39,7 @@ function ProjectCard({
             />
           </div>
         )}
-        <p className="text-xs opacity-20 w-full text-right xl:block hidden">
+        <p className="text-xs opacity-20 w-full text-left xl:block hidden">
           {description}
         </p>
         {children && <p className="relative z-10">{children}</p>}

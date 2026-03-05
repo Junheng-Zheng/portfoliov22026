@@ -41,48 +41,49 @@ const Pack = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-3 lg:px-6"></div>
-      <div className="w-full lg:gap-3 grid grid-cols-2">
-        <div className="w-full h-[280px] lg:h-[600px] relative  col-span-2 bg-gray-100">
-          <Image
-            src="/pack/pack1.png"
-            alt="cover"
-            fill
-            className="object-cover object-center"
-          />
-        </div>
+      <div className="flex flex-col gap-3 lg:px-6">
+        <div className="w-full lg:gap-3 grid grid-cols-2">
+          <div className="w-full h-[280px] lg:h-[600px] relative  col-span-2 bg-gray-100">
+            <Image
+              src="/pack/pack1.png"
+              alt="cover"
+              fill
+              className="object-cover object-center"
+            />
+          </div>
 
-        <div className="w-full h-full relative row-span-2 col-span-1 bg-gray-100">
-          <Image
-            src="/pack/pack2.png"
-            alt="1"
-            fill
-            className="object-cover object-center"
-          />
-        </div>
-        <div className="w-full h-[200px]  lg:h-[500px] relative row-span-1 col-span-1 bg-gray-100">
-          <Image
-            src="/pack/pack3.png"
-            alt="2"
-            fill
-            className="object-cover object-center"
-          />
-        </div>
-        <div className="w-full h-[200px] lg:h-[500px] relative row-span-1 col-span-1 bg-gray-100">
-          <Image
-            src="/pack/pack4.png"
-            alt="3"
-            fill
-            className="object-cover object-bottom"
-          />
-        </div>
-        <div className="w-full h-[280px] lg:h-[600px] relative  col-span-2 bg-gray-100">
-          <Image
-            src="/pack/pack5.png"
-            alt="4"
-            fill
-            className="object-cover object-top"
-          />
+          <div className="w-full h-full relative row-span-2 col-span-1 bg-gray-100">
+            <Image
+              src="/pack/pack2.png"
+              alt="1"
+              fill
+              className="object-cover object-center"
+            />
+          </div>
+          <div className="w-full h-[200px]  lg:h-[500px] relative row-span-1 col-span-1 bg-gray-100">
+            <Image
+              src="/pack/pack3.png"
+              alt="2"
+              fill
+              className="object-cover object-center"
+            />
+          </div>
+          <div className="w-full h-[200px] lg:h-[500px] relative row-span-1 col-span-1 bg-gray-100">
+            <Image
+              src="/pack/pack4.png"
+              alt="3"
+              fill
+              className="object-cover object-bottom"
+            />
+          </div>
+          <div className="w-full h-[280px] lg:h-[600px] relative  col-span-2 bg-gray-100">
+            <Image
+              src="/pack/pack5.png"
+              alt="4"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
         </div>
       </div>
       <Footer />
