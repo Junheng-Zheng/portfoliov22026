@@ -87,9 +87,9 @@ export default function Home() {
       className={`w-full  flex flex-row-reverse  ${unlocked ? "overflow-visible" : "overflow-hidden"}`}
     >
       <div
-        className={` bg-white/3 flex flex-col overflow-hidden  justify-between ${menuOpen ? " md:w-[400px] w-full p-6 pl-0 h-dvh items-start" : "w-0"} transition-all duration-300 spacemono text-sm  right-0  z-20`}
+        className={` bg-[#0a0a0a] md:bg-white/3 flex flex-col overflow-hidden fixed h-dvh md:relative justify-between ${menuOpen ? " md:w-[400px] w-full p-6 md:pl-0  items-start" : "w-0"} transition-all duration-300 spacemono text-sm  right-0  z-20`}
       >
-        <div className="flex flex-col gap-3 items-start">
+        <div className="flex w-full flex-col gap-3 items-start">
           <button
             onClick={() => {
               setMenuOpen(false);
@@ -169,14 +169,14 @@ export default function Home() {
             </DecryptedText>
           </Link>
         </div>
-        <div className="flex spacemono text-xs uppercase flex-col gap-1 border-t border-white/50 opacity-20  pt-3 items-start">
+        <div className="flex w-full spacemono text-xs uppercase flex-col gap-1 border-t border-white/50 opacity-20  pt-3 items-start">
           <p>[Designed in Figma]</p>
           <p>[Developed in React, Tailwind]</p>
           <p>[Hosted on Vercel]</p>
         </div>
       </div>
       <div
-        className={`${menuOpen ? "p-6 h-dvh" : "p-0"} bg-white/3 flex flex-col transition-all duration-300`}
+        className={`${menuOpen ? "md:p-6 md:h-dvh" : "p-0"} bg-white/3 flex flex-col transition-all duration-300`}
       >
         <div
           className={`flex-1 h-full rounded-lg relative ${menuOpen ? "overflow-hidden border border-white/5 " : ""}`}
