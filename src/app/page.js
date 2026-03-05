@@ -416,15 +416,7 @@ export default function Home() {
           <div ref={ref} className="h-[240vh]">
             <div className="sticky top-0 h-dvh grid grid-cols-2 md:grid-cols-3  bg-black">
               <div className="absolute top-1/2 left-1/2  flex flex-col gap-4 -translate-x-1/2 -translate-y-1/2 text-white z-2 uppercase spacegrotesk text-lg font-medium   text-center ">
-                <DecryptedText
-                  speed={80}
-                  maxIterations={15}
-                  animateOn="view"
-                  className="uppercase cursor-pointer"
-                  parentClassName="hover:italic"
-                >
-                  Bridging the gap between design and development.
-                </DecryptedText>
+                Bridging the gap between design and development.
               </div>
               <Image
                 src="/bridge.png"
