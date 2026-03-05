@@ -166,10 +166,10 @@ export default function Home() {
         </div>
       </div>
       <motion.div
-        initial={{ maxHeight: "100dvh" }}
-        animate={{ maxHeight: "fit-content" }}
+        initial={{ minHeight: "100dvh", height: "100dvh" }}
+        animate={{ minHeight: "fit-content", height: "fit-content" }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="w-full h-dvh  flex flex-col py-6 md:gap-10 gap-12 text-sm spacemono items-center"
+        className="w-full  flex flex-col py-6 md:gap-10 gap-12 text-sm spacemono items-center"
       >
         <motion.div
           initial={{ opacity: 0, y: -30, height: 0 }}
