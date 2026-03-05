@@ -23,8 +23,8 @@ const Pack = () => {
     }
   };
   return (
-    <div className="flex flex-col py-6 bg-[#131313]  text-sm uppercase spacemono">
-      <div className="flex flex-col pb-6 px-6 text-sm opacity-90  uppercase gap-7">
+    <div className="flex flex-col bg-[#131313]  text-sm uppercase spacemono">
+      {/* <div className="flex flex-col pb-6 px-6 text-sm opacity-90  uppercase gap-7">
         <Link className="cursor-pointer text-xs  hover:italic" href="/">
           [Back to Home]
         </Link>
@@ -56,10 +56,10 @@ const Pack = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="w-full py-[240px] bg-black flex-col text-sm gap-3 flex justify-center items-center">
-        <div className="flex flex-col gap-5 ">
+      <div className="w-full h-dvh bg-[#131313]  flex-col text-sm gap-3 flex justify-center relative items-center">
+        <div className="flex flex-col  items-center gap-5 ">
           <p>Want to learn more? Enter with password. </p>
           <form
             onSubmit={handleSubmit}
@@ -83,6 +83,12 @@ const Pack = () => {
               </p>
             )}
           </form>
+          <Link
+            className="cursor-pointer text-xs opacity-50 hover:italic"
+            href="/"
+          >
+            [Back to Home]
+          </Link>
         </div>
       </div>
       <Footer />

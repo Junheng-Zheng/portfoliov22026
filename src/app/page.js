@@ -448,6 +448,7 @@ export default function Home() {
                 className="xl:border-l border-white/10"
                 title="[GENE LUEN YANG]"
                 description="Commissioned by Award Winning Author Gene Yang"
+                comingSoon={true}
               ></ProjectCard>
               <ProjectCard
                 progress={scrollYProgress}
@@ -465,6 +466,7 @@ export default function Home() {
                 className="xl:border-t xl:border-l border-white/10"
                 title="[BALANCE]"
                 description="Mood Tracker and Journaling App"
+                comingSoon={true}
               ></ProjectCard>
               <ProjectCard
                 progress={scrollYProgress}
@@ -473,6 +475,7 @@ export default function Home() {
                 className="xl:border-l xl:border-t border-white/10"
                 title="[Figma Studies]"
                 description="Daily 30 minute Figma designs given a prompt"
+                comingSoon={true}
               ></ProjectCard>
             </div>
           </div>

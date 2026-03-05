@@ -11,6 +11,7 @@ function ProjectCard({
   className = "",
   image = "",
   href = "",
+  comingSoon = false,
 }) {
   const [start] = range;
 
@@ -26,7 +27,7 @@ function ProjectCard({
     <motion.div style={{ opacity: isActive }} className={`relative z-20 `}>
       <Link
         href={href}
-        className={`w-full h-full flex flex-col bg-[#1f1f1f] group items-center md:items-start z-20 gap-4 xl:p-5 spacemono text-sm justify-center text-white uppercase ${className}`}
+        className={`w-full h-full flex flex-col bg-[#1f1f1f] group relative items-center md:items-start z-20 gap-4 xl:p-5 spacemono text-sm justify-center text-white uppercase ${className}`}
       >
         <p className="text-xs opacity-20 hidden xl:block">{title}</p>
         {image && (
@@ -37,6 +38,11 @@ function ProjectCard({
               fill
               className="object-cover group-hover:scale-105 transition-all duration-300 object-center"
             />
+            {comingSoon && (
+              <p className="z-20 absolute top-0 right-0 text-xs rounded-bl-sm bg-orange-600 px-3 py-2 ">
+                [Coming Soon]
+              </p>
+            )}
           </div>
         )}
         <p className="text-xs opacity-20 w-full text-left xl:block hidden">
