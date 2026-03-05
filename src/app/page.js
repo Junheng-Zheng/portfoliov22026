@@ -659,14 +659,11 @@ const TableRow = ({ border = true, children, delay, date, className }) => {
         More
       </div> */}
 
-      <div className="flex-1 py-3 text-left md:flex hidden   border-white/50 px-4">
+      <div className="flex-1 py-3 md:text-left text-center   border-white/50 px-4">
         {children}
       </div>
       <div className="flex-1 hidden md:flex px-6 justify-end items-end">
         {date}
-      </div>
-      <div className="flex-1 py-3 text-left  md:hidden flex px-6">
-        {children} {date}
       </div>
 
       {/* <div
