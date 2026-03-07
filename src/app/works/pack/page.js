@@ -86,9 +86,282 @@ const Pack = () => {
           </div>
         </div>
       </div>
+      <div className="flex flex-col gap-24 pb-24 items-center">
+        <div className="w-full h-[12px] bg-orange-600 sticky top-0"></div>
+        <Paragraph title="Overview">
+          Tiger Snack Box is a company that makes sells international snacks to
+          US consumers. I was commissioned as a lead designer for a mobile game
+          with the goal of improving brand visibility.
+        </Paragraph>
+        <Paragraph title="Requirements Gathering">
+          Our instructions were direct. We were given gameplay mechanics,
+          constraints, brand identity, and what they wanted out of the game. The
+          rest was up to us.
+        </Paragraph>
+        <Paragraph title="Question">
+          How can we create a mobile game that increase both brand visibility
+          and engagement while coinciding with stakeholders&apos; goals?
+        </Paragraph>
+        <Paragraph title="Discovery">
+          To tackle the question, we analyzed the constraints and guidelines
+          given to us.
+        </Paragraph>
+        <div className="flex gap-4 ">
+          <div className="flex flex-col w-[400px] border border-white/50  h-fit">
+            <div className="w-full px-3 py-2 border-b border-white/50">
+              Constraints
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col w-[400px] border border-white/50  h-fit">
+            <div className="w-full px-3 py-2 border-b border-white/50">
+              Constraints
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Paragraph title="Market Research">
+          With constraints and guidelines in mind, we conducted market research.
+          This stage was split up into two parts: a competitor analysis for
+          qualitative data and user reviews for quantitative data.
+        </Paragraph>
+        <Paragraph title="Competitor Analysis">
+          We analyzed competitors in the puzzle game genre to understand their
+          strengths and weaknesses.
+        </Paragraph>
+        <div className="grid grid-cols-2 gap-4 ">
+          <div className="flex flex-col w-[400px] border border-white/50  h-fit">
+            <div className="w-full px-3 py-2 border-b border-white/50">
+              Constraints
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col w-[400px] border border-white/50  h-fit">
+            <div className="w-full px-3 py-2 border-b border-white/50">
+              Constraints
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col w-[400px] border border-white/50  h-fit">
+            <div className="w-full px-3 py-2 border-b border-white/50">
+              Constraints
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+            <div className="w-full px-3 py-2 gap-2 flex flex-col  border-b border-white/50">
+              Gameplay
+              <div className="pl-4 text-xs flex flex-col gap-2">
+                <p>Single player</p>
+                <p>Puzzle game</p>
+                <p>2D</p>
+                <p>Mobile</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Paragraph title="User Reviews">
+          We also collected 50 reviews from each compeitor app to understand how
+          users perceive the games.
+        </Paragraph>
+        <div className="grid grid-cols-2 gap-4 ">
+          <div className="flex flex-col w-[400px]  p-6 gap-2 text-xs  border border-white/50  h-fit">
+            <p className="spacegrotesk font-bold text-lg">78%</p>
+            <p>Love the illustrative and cosy feel of Cats & Soup</p>
+          </div>
+          <div className="flex flex-col w-[400px]  p-6 gap-2 text-xs  border border-white/50  h-fit">
+            <p className="spacegrotesk font-bold text-lg">78%</p>
+            <p>Love the illustrative and cosy feel of Cats & Soup</p>
+          </div>
+          <div className="flex flex-col w-[400px]  p-6 gap-2 text-xs  border border-white/50  h-fit">
+            <p className="spacegrotesk font-bold text-lg">78%</p>
+            <p>Love the illustrative and cosy feel of Cats & Soup</p>
+          </div>
+          <div className="flex flex-col w-[400px]  p-6 gap-2 text-xs  border border-white/50  h-fit">
+            <p className="spacegrotesk font-bold text-lg">78%</p>
+            <p>Love the illustrative and cosy feel of Cats & Soup</p>
+          </div>
+        </div>
+        <Paragraph title="Insight Summary">
+          We created summaries of our insights to help us understand the market
+          and the users.
+        </Paragraph>
+        <div className="grid grid-cols-2 gap-4 ">
+          <div className="flex flex-col w-[400px]  p-6 gap-3 text-xs  border border-white/50  h-fit">
+            <p className="spacegrotesk font-bold leading-tight text-lg">
+              Use hand drawn textures and pastel, retro colors
+            </p>
+            <p>Love the illustrative and cosy feel of Cats & Soup</p>
+          </div>
+          <div className="flex flex-col w-[400px]  p-6 gap-3 text-xs  border border-white/50  h-fit">
+            <p className="spacegrotesk font-bold leading-tight text-lg">
+              Use hand drawn textures and pastel, retro colors
+            </p>
+            <p>Love the illustrative and cosy feel of Cats & Soup</p>
+          </div>
+          <div className="flex flex-col w-[400px]  p-6 gap-3 text-xs  border border-white/50  h-fit">
+            <p className="spacegrotesk font-bold leading-tight text-lg">
+              Use hand drawn textures and pastel, retro colors
+            </p>
+            <p>Love the illustrative and cosy feel of Cats & Soup</p>
+          </div>
+          <div className="flex flex-col w-[400px]  p-6 gap-3 text-xs  border border-white/50  h-fit">
+            <p className="spacegrotesk font-bold leading-tight text-lg">
+              Use hand drawn textures and pastel, retro colors
+            </p>
+            <p>Love the illustrative and cosy feel of Cats & Soup</p>
+          </div>
+        </div>
+        <Paragraph title="Personas">
+          We created four different personas based on insights and user reviews.
+        </Paragraph>
+        <Paragraph title="Solution & Metric of Success">
+          We created four different personas based on insights and user reviews.
+        </Paragraph>
+        <Paragraph title="User Flows">
+          We created four different personas based on insights and user reviews.
+        </Paragraph>
+        <Paragraph title="Low Fidelity Wireframes">
+          We created four different personas based on insights and user reviews.
+        </Paragraph>
+        <Paragraph title="Design Tokens">
+          We created four different personas based on insights and user reviews.
+        </Paragraph>
+        <Paragraph title="High Fidelity Wireframes">
+          We created four different personas based on insights and user reviews.
+        </Paragraph>
+        <Paragraph title="Details and Design Choices">
+          We created four different personas based on insights and user reviews.
+        </Paragraph>
+        <Paragraph title="User Flows & Prototyping">
+          We created four different personas based on insights and user reviews.
+        </Paragraph>
+        <Paragraph title="Delievery & Final Thoughts">
+          We created four different personas based on insights and user reviews.
+        </Paragraph>
+      </div>
       <Footer />
     </div>
   );
 };
 
 export default Pack;
+
+const Paragraph = ({ children, title }) => {
+  return (
+    <div className="flex flex-col gap-2 w-1/3 px-6">
+      <h2 className="text-lg uppercase font-bold spacegrotesk">{title}</h2>
+      <p className="text-sm spacemono  ">{children}</p>
+    </div>
+  );
+};

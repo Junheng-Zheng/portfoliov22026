@@ -471,7 +471,7 @@ export default function Home() {
               <ProjectCard
                 progress={scrollYProgress}
                 range={[0.85, 1]}
-                image="/project/stud.png"
+                image="/project/stu.png"
                 className="xl:border-l xl:border-t border-white/10"
                 title="[Figma Studies]"
                 description="Daily 30 minute Figma designs given a prompt"
