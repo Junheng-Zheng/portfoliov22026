@@ -86,7 +86,7 @@ const Pack = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-24 pb-24 items-center">
+      {/* <div className="flex flex-col gap-24 pb-24 items-center">
         <div className="w-full h-[12px] bg-orange-600 sticky top-0"></div>
         <Paragraph title="Overview">
           Tiger Snack Box is a company that makes sells international snacks to
@@ -349,7 +349,7 @@ const Pack = () => {
         <Paragraph title="Delievery & Final Thoughts">
           We created four different personas based on insights and user reviews.
         </Paragraph>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
