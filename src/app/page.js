@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import ScrollRevealText from "./components/ScrollRevealText";
 import ProjectCard from "./components/ProjectCard";
 import Diagram from "./components/Diagram";
+import AppearingText from "./components/AppearingText";
 
 export default function Home() {
   const [progress, setProgress] = useState("[0%]");
@@ -87,7 +88,7 @@ export default function Home() {
       className={`w-full  flex flex-row-reverse  ${unlocked ? "overflow-visible" : "overflow-hidden"}`}
     >
       <div
-        className={` bg-[#0a0a0a] md:bg-white/3 flex flex-col overflow-hidden fixed h-dvh md:relative justify-between ${menuOpen ? " md:w-[400px] w-full p-6 md:pl-0  items-start" : "w-0"} transition-all duration-300 spacemono text-sm  right-0  z-20`}
+        className={` bg-[#0a0a0a] md:bg-white/3 flex flex-col overflow-hidden fixed h-dvh md:relative justify-between ${menuOpen ? " md:w-[240px] w-full p-6 md:pl-0  items-start" : "w-0"} transition-all duration-300 spacemono text-[15px]  right-0  z-20`}
       >
         <div className="flex w-full flex-col gap-3 items-start">
           <button
@@ -103,7 +104,7 @@ export default function Home() {
             className="spacegrotesk text-3xl w-full font-medium hover:italic"
           >
             <DecryptedText
-              speed={80}
+              speed={40}
               maxIterations={15}
               animateOn="view"
               className="uppercase cursor-pointer"
@@ -117,7 +118,7 @@ export default function Home() {
             className="spacegrotesk text-3xl  w-full font-medium hover:italic"
           >
             <DecryptedText
-              speed={80}
+              speed={40}
               maxIterations={15}
               animateOn="view"
               className="uppercase cursor-pointer"
@@ -131,7 +132,7 @@ export default function Home() {
             className="spacegrotesk text-3xl w-full font-medium hover:italic"
           >
             <DecryptedText
-              speed={80}
+              speed={40}
               maxIterations={15}
               animateOn="view"
               className="uppercase cursor-pointer"
@@ -145,7 +146,7 @@ export default function Home() {
             className="spacegrotesk text-3xl w-full font-medium hover:italic"
           >
             <DecryptedText
-              speed={80}
+              speed={40}
               maxIterations={15}
               animateOn="view"
               className="uppercase cursor-pointer"
@@ -159,7 +160,7 @@ export default function Home() {
             className="spacegrotesk text-3xl w-full font-medium hover:italic"
           >
             <DecryptedText
-              speed={80}
+              speed={40}
               maxIterations={15}
               animateOn="view"
               className="uppercase cursor-pointer"
@@ -176,7 +177,7 @@ export default function Home() {
         </div>
       </div>
       <div
-        className={`${menuOpen ? "md:p-6 md:h-dvh" : "p-0"} bg-white/3 flex flex-col transition-all duration-300`}
+        className={`${menuOpen ? "md:p-6 md:h-dvh" : "p-0"} bg-white/3 flex flex-1 flex-col transition-all duration-300`}
       >
         <div
           className={`flex-1 h-full rounded-lg relative ${menuOpen ? "overflow-hidden border border-white/5 " : ""}`}
@@ -192,7 +193,7 @@ export default function Home() {
                 : { minHeight: "100dvh", height: "100dvh" }
             }
             transition={{ duration: 0.5 }}
-            className="w-full bg-[#0a0a0a] flex flex-col py-6 md:gap-10 gap-12 text-sm spacemono items-center"
+            className="w-full bg-[#0a0a0a] flex flex-col py-6 md:gap-10 gap-12 text-[15px] spacemono items-center"
           >
             <motion.div
               initial={{ opacity: 0, y: -30, height: 0 }}
@@ -237,7 +238,7 @@ export default function Home() {
                     className="hover:italic"
                   >
                     <DecryptedText
-                      speed={100}
+                      speed={40}
                       maxIterations={15}
                       parentClassName="hover:italic"
                       className="uppercase cursor-pointer"
@@ -265,11 +266,11 @@ export default function Home() {
                   <div className="text-center uppercase max-w-md">
                     <span>{progress}</span>
                     <DecryptedText
-                      speed={100}
-                      maxIterations={15}
+                      speed={40}
+                      maxIterations={5}
+                      parentClassName="hover:italic"
+                      className="uppercase cursor-pointer"
                       animateOn="view"
-                      className="text-center uppercase"
-                      parentClassName="inline"
                     >
                       {progressAfter}
                     </DecryptedText>
@@ -297,7 +298,7 @@ export default function Home() {
                     className="hover:italic"
                   >
                     <DecryptedText
-                      speed={100}
+                      speed={40}
                       maxIterations={15}
                       parentClassName="hover:italic"
                       className="uppercase cursor-pointer"
@@ -330,7 +331,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
           <motion.div
-            className="w-full  flex flex-col text-sm uppercase spacemono md:flex-row  "
+            className="w-full  flex flex-col text-[15px] uppercase spacemono md:flex-row  "
             initial={{ y: 30, height: 0 }}
             animate={{ y: 0, height: "fit-content" }}
             transition={{ duration: 0.5, delay: delay + 0.2 }}
@@ -427,6 +428,14 @@ export default function Home() {
               <ProjectCard
                 progress={scrollYProgress}
                 range={[0.1, 0.25]}
+                video="/project/proprio.mov"
+                title="[PROPRIO]"
+                href="https://devpost.com/software/proprio"
+                description="Submission for Figbuild 2026"
+              ></ProjectCard>
+              <ProjectCard
+                progress={scrollYProgress}
+                range={[0.25, 0.4]}
                 image="/project/lmi.png"
                 title="[LIBERTY MUTUAL]"
                 href="/works/liberty-mutual"
@@ -434,7 +443,7 @@ export default function Home() {
               ></ProjectCard>
               <ProjectCard
                 progress={scrollYProgress}
-                range={[0.25, 0.4]}
+                range={[0.4, 0.55]}
                 image="/project/packcover.png"
                 className="xl:border-l border-white/10"
                 href="/works/pack"
@@ -443,14 +452,14 @@ export default function Home() {
               ></ProjectCard>
               <ProjectCard
                 progress={scrollYProgress}
-                range={[0.4, 0.55]}
+                range={[0.55, 0.7]}
                 image="/project/gene.png"
                 className="xl:border-l border-white/10"
                 title="[GENE LUEN YANG]"
                 description="Commissioned by Award Winning Author Gene Yang"
                 comingSoon={true}
               ></ProjectCard>
-              <ProjectCard
+              {/* <ProjectCard
                 progress={scrollYProgress}
                 range={[0.55, 0.7]}
                 image="/project/chat.png"
@@ -458,7 +467,7 @@ export default function Home() {
                 title="[JUNBOT]"
                 href="https://junbot.vercel.app/"
                 description="Personal Assistant for Junheng"
-              ></ProjectCard>
+              ></ProjectCard> */}
               <ProjectCard
                 progress={scrollYProgress}
                 range={[0.7, 0.85]}
@@ -480,7 +489,7 @@ export default function Home() {
             </div>
           </div>
           <div ref={textRef} className="h-[300vh]">
-            <div className="sticky top-0 w-full h-dvh flex items-center flex-col justify-center bg-[#131313] uppercase spacemono text-sm text-center">
+            <div className="sticky top-0 w-full h-dvh flex items-center flex-col justify-center bg-[#131313] uppercase spacemono text-[15px] text-center">
               <div className="w-full h-full flex items-center spacegrotesk text-lg font-medium justify-center">
                 <ScrollRevealText progress={textScrollProgress}>
                   Junheng combines design, and development to create beautiful
@@ -492,7 +501,7 @@ export default function Home() {
           </div>
 
           <motion.div
-            className="h-dvh flex gap-8 items-center flex-col justify-center mono text-sm opacity-90 relative uppercase spacemono"
+            className="h-dvh flex gap-8 items-center flex-col justify-center mono text-[15px] opacity-90 relative uppercase spacemono"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0, once: true }}
