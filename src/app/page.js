@@ -369,7 +369,7 @@ export default function Home() {
                 ))}
               </div>
               <Image
-                src="/juncover2.jpeg"
+                src="/juncover.png"
                 alt="hero"
                 fill
                 className="object-cover object-center"
