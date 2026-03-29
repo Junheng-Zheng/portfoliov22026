@@ -1,32 +1,14 @@
 import Link from "next/link";
 import Juntext from "./Juntext";
+import AskeRandomizerGrid from "./AskeRandomizerGrid";
 
 const Footer = () => {
   return (
-    <div className="w-full flex flex-col gap-14 opacity-90 text-white uppercase spacemono relative bg-black text-sm">
-      <div className="p-6 flex flex-col gap-6">
+    <div className="w-full flex flex-col gap-14 pt-24 opacity-90 text-white uppercase spacemono relative bg-black text-sm">
+      <AskeRandomizerGrid cols={120} rows={8} />
+      {/* <div className="p-6 flex flex-col gap-6">
         <Juntext />
-        <div className="flex w-full  gap-3 opacity-90  uppercase items-center justify-between ">
-          <Link
-            href="/resume.png"
-            target="_blank"
-            className="uppercase hover:italic"
-          >
-            [Resume]
-          </Link>
-          <a href="mailto:jz7259@g.rit.edu" className="uppercase hover:italic">
-            [Email]
-          </a>
-          <Link
-            href="https://www.linkedin.com/in/junhengzheng/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="uppercase hover:italic"
-          >
-            [LinkedIn]
-          </Link>
-        </div>
-      </div>
+      </div> */}
       {/* <Image src="/bridge.png" alt="hero" fill className="object-cover object-center opacity-10" /> */}
       {/* 
          <div className = "w-full relative z-10   overflow-hidden flex flex-col  border-t border-white/50 ">

@@ -1,7 +1,7 @@
 const Juntext = () => {
   return (
     <svg
-      className="w-full h-auto block opacity-90 "
+      className="w-full h-auto block opacity-90 hidden md:block"
       width="100%"
       height="auto"
       preserveAspectRatio="xMinYMin meet"

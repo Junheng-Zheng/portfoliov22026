@@ -90,9 +90,9 @@ const Diagram = ({ progress }) => {
     ([l, r]) => (l + r) * 45,
   );
   return (
-    <div className="w-full flex h-2/3 border-t border-white/5 p-4 gap-4 flex-col">
+    <div className="w-full flex spacemono text-xs h-2/3 border-t border-white/5 p-4 gap-4 flex-col">
       {/* TOP VISUAL */}
-      <div className="w-full xl:h-[200px] flex items-center justify-center overflow-hidden bg-black rounded-sm xl:opacity-30 opacity-50">
+      <div className="w-full xl:h-[200px] saturate-0 flex items-center justify-center overflow-hidden bg-black rounded-sm xl:opacity-30 opacity-50">
         <div className="w-full h-full flex items-end  opacity-50">
           <motion.div
             style={{ rotate: discoveryRotate }}
@@ -165,13 +165,13 @@ const Diagram = ({ progress }) => {
       </div>
 
       {/* CONNECTOR */}
-      <div className="flex flex-col items-center">
-        <div className="h-5 xl:w-1/4 w-1/2 border-b border-r border-orange-600 translate-y-[0.5px] border-dashed translate-x-1/2 rounded-br-sm" />
-        <div className="h-5 xl:w-1/4 w-1/2 border-t border-l border-orange-600 translate-y-[-0.5px] border-dashed -translate-x-1/2 rounded-tl-sm" />
-      </div>
+      {/* <div className="flex flex-col items-center">
+        <div className="h-5 xl:w-1/4 w-1/2 border-b border-r border-purple-600 translate-y-[0.5px] border-dashed translate-x-1/2 rounded-br-sm" />
+        <div className="h-5 xl:w-1/4 w-1/2 border-t border-l border-purple-600 translate-y-[-0.5px] border-dashed -translate-x-1/2 rounded-tl-sm" />
+      </div> */}
 
       {/* BOTTOM VISUAL */}
-      <div className="w-full xl:h-[200px] flex items-center justify-around overflow-hidden bg-black rounded-sm xl:opacity-30 opacity-50">
+      <div className="w-full xl:h-[200px] flex saturate-0 items-center justify-around overflow-hidden bg-black rounded-sm xl:opacity-30 opacity-50">
         <div className="w-1/3 h-full opacity-50 flex items-center">
           <motion.div
             style={{ rotate: developmentRotate }}
