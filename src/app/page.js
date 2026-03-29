@@ -203,7 +203,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
                     type: "spring",
-                    stiffness: 400, // higher = faster, snappier
+                    stiffness: 300, // higher = faster, snappier
                     damping: 60, // lower = more bounce
                     delay: 0.4,
                   }}
@@ -289,11 +289,16 @@ export default function Home() {
                   </motion.div>
                 </div>
               </div>
-              <AskeRandomizerGrid cols={120} rows={4} rowsMd={6} />
+              <AskeRandomizerGrid cols={120} rows={4} rowsMd={8} />
             </div>
           </div>
           <div className=" border-t border-b border-white/10 flex ">
-            <div className="w-fit spacemono sticky px-12 py-8 top-0 h-fit   text-white uppercase text-sm flex-col hidden md:flex  gap-4">
+            <div className="w-fit spacemono sticky px-12 py-8 top-0 h-dvh   text-white uppercase text-sm flex-col hidden md:flex  gap-4">
+              <div className="absolute top-0 left-0  pointer-events-none inset-0 flex justify-between">
+                {Array.from({ length: 20 }).map((_, index) => (
+                  <div key={index} className="w-px h-full bg-white/5"></div>
+                ))}
+              </div>
               <div className="w-full h-fit overflow-hidden">
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "100%" }}
@@ -461,6 +466,11 @@ export default function Home() {
               </div>
             </div>
             <div className="w-fit spacemono sticky px-12 py-8 top-0 justify-end items-end h-dvh   text-white uppercase text-sm flex-col  hidden md:flex  gap-4">
+              <div className="absolute top-0 left-0  pointer-events-none inset-0 flex justify-between">
+                {Array.from({ length: 20 }).map((_, index) => (
+                  <div key={index} className="w-px h-full bg-white/5"></div>
+                ))}
+              </div>
               <div className="overflow-hidden">
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "100%" }}
