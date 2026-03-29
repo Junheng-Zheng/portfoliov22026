@@ -163,8 +163,10 @@ export default function Home() {
                   initial={{ opacity: 0, blur: 10, y: "100%" }}
                   whileInView={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
-                    duration: 0.3,
-                    delay: 0,
+                    type: "spring",
+                    stiffness: 400, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 0.2,
                   }}
                   viewport={{ amount: 0, once: true }}
                   className="flex justify-between w-full items-center gap-4"
@@ -186,11 +188,13 @@ export default function Home() {
               </div>
               <div className="w-full h-fit overflow-hidden">
                 <motion.div
-                  initial={{ opacity: 0, blur: 10, y: "100%" }}
+                  initial={{ opacity: 0, y: "100%" }}
                   whileInView={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
-                    duration: 0.3,
-                    delay: 0.3,
+                    type: "spring",
+                    stiffness: 400, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 0.4,
                   }}
                   viewport={{ amount: 0, once: true }}
                 >
@@ -207,7 +211,9 @@ export default function Home() {
                     initial={{ opacity: 0, blur: 10, y: "100%" }}
                     whileInView={{ opacity: 1, blur: 0, y: 0 }}
                     transition={{
-                      duration: 0.3,
+                      type: "spring",
+                      stiffness: 400, // higher = faster, snappier
+                      damping: 60, // lower = more bounce
                       delay: 0.6,
                     }}
                     viewport={{ amount: 0, once: true }}
@@ -232,7 +238,9 @@ export default function Home() {
                     initial={{ opacity: 0, blur: 10, y: "100%" }}
                     whileInView={{ opacity: 1, blur: 0, y: 0 }}
                     transition={{
-                      duration: 0.3,
+                      type: "spring",
+                      stiffness: 400, // higher = faster, snappier
+                      damping: 60, // lower = more bounce
                       delay: 0.6,
                     }}
                     viewport={{ amount: 0, once: true }}
@@ -267,8 +275,10 @@ export default function Home() {
                   initial={{ opacity: 0, blur: 10, y: "100%" }}
                   whileInView={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
-                    duration: 0.3,
-                    delay: 0.9,
+                    type: "spring",
+                    stiffness: 400, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 0.4,
                   }}
                   viewport={{ amount: 0, once: true }}
                   className="flex items-center cursor-pointer group gap-1"
@@ -282,8 +292,10 @@ export default function Home() {
                   initial={{ opacity: 0, blur: 10, y: "100%" }}
                   whileInView={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
-                    duration: 0.3,
-                    delay: 1.2,
+                    type: "spring",
+                    stiffness: 400, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 0.6,
                   }}
                   viewport={{ amount: 0, once: true }}
                   className="flex items-center cursor-pointer group gap-1"
@@ -298,8 +310,10 @@ export default function Home() {
                   initial={{ opacity: 0, blur: 10, y: "100%" }}
                   whileInView={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
-                    duration: 0.3,
-                    delay: 1.5,
+                    type: "spring",
+                    stiffness: 400, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 0.8,
                   }}
                   viewport={{ amount: 0, once: true }}
                   className="flex items-center cursor-pointer group gap-1"
@@ -312,11 +326,13 @@ export default function Home() {
             <div className="w-full h-full border-l  flex flex-col border-r border-white/10  ">
               <div className="w-full grid grid-cols-1 overflow-hidden  px-6  py-8 border-b border-white/10 h-fit relative  md:grid-cols-2 gap-8">
                 <motion.div
-                  initial={{ opacity: 0, blur: 10, y: "20%" }}
+                  initial={{ opacity: 0, blur: 10, y: "10%" }}
                   animate={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
-                    duration: 0.3,
-                    delay: 1.2,
+                    type: "spring",
+                    stiffness: 300, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 0.8,
                   }}
                   viewport={{ amount: 0, once: true }}
                   className="w-full group cursor-pointer aspect-4/3  relative overflow-hidden rounded-md "
@@ -331,11 +347,13 @@ export default function Home() {
                   <div className="absolute top-0 left-0 w-full h-full bg-white/90"></div>
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, blur: 10, y: "20%" }}
+                  initial={{ opacity: 0, blur: 10, y: "10%" }}
                   animate={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
-                    duration: 0.3,
-                    delay: 1.2,
+                    type: "spring",
+                    stiffness: 300, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 1,
                   }}
                   viewport={{ amount: 0, once: true }}
                   className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"

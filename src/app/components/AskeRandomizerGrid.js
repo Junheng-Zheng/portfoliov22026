@@ -8,6 +8,7 @@ import {
   makeAskCells,
   DEFAULT_ASK_TICK_MS,
 } from "./askePresets";
+import { motion } from "framer-motion";
 
 export default function AskeRandomizerGrid({
   cols = 12,
@@ -42,7 +43,14 @@ export default function AskeRandomizerGrid({
   }, [tickMs, cols, rows]);
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, blur: 10, y: "100%" }}
+      whileInView={{ opacity: 0.4, blur: 0, y: 0 }}
+      transition={{
+        duration: 0.3,
+        delay: 0.6,
+      }}
+      viewport={{ amount: 0, once: true }}
       className={`absolute opacity-40 pointer-events-none w-full bottom-0 left-0 flex ${className}`}
     >
       {Array.from({ length: cols }).map((_, col) => (
@@ -65,6 +73,6 @@ export default function AskeRandomizerGrid({
           })}
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 }
