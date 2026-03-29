@@ -61,7 +61,7 @@ export default function AskeRandomizerGrid({
       animate={{ opacity: 0.4, blur: 0, y: 0 }}
       transition={{
         duration: 0.3,
-        delay: 1,
+        delay: 0.7,
       }}
       viewport={{ amount: 0, once: true }}
       className={`absolute opacity-32 pointer-events-none w-full bottom-0 left-0 flex ${className}`}

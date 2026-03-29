@@ -93,7 +93,9 @@ export default function Home() {
   }, [progressValue, unlocked, delay]);
 
   return (
-    <motion.div className={`w-full  flex flex-row-reverse   geist text-base`}>
+    <motion.div
+      className={`w-full max-w-[1800px] mx-auto 2xl:border-l 2xl:border-r border-white/10 flex flex-row-reverse   geist text-base`}
+    >
       <div
         className={` bg-[#0a0a0a]  flex flex-col  overflow-hidden fixed h-dvh md:relative justify-between ${menuOpen ? " md:w-[240px] w-full p-6 md:pl-0  items-start" : "w-0"} transition-all duration-300 spacemono text-[16px]  right-0  z-50`}
       >
@@ -382,7 +384,7 @@ export default function Home() {
                     type: "spring",
                     stiffness: 300, // higher = faster, snappier
                     damping: 60, // lower = more bounce
-                    delay: 1,
+                    delay: 0.8,
                   }}
                   viewport={{ amount: 0, once: true }}
                   className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"
@@ -391,7 +393,7 @@ export default function Home() {
                     src="/limi.gif"
                     alt="pack1"
                     fill
-                    className="object-cover group-hover:scale-120 transition-all duration-300 object-center  z-20  "
+                    className="object-cover group-hover:scale-105  transition-all duration-300 object-center  z-20  "
                   />
                 </motion.div>
                 <motion.div
@@ -401,7 +403,7 @@ export default function Home() {
                     type: "spring",
                     stiffness: 300, // higher = faster, snappier
                     damping: 60, // lower = more bounce
-                    delay: 1.1,
+                    delay: 0.9,
                   }}
                   viewport={{ amount: 0, once: true }}
                   className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"
@@ -410,7 +412,7 @@ export default function Home() {
                     src="/project/pack.png"
                     alt="pack1"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover group-hover:scale-105 transition-all duration-300 object-center"
                   />
                 </motion.div>
                 <motion.div
@@ -429,7 +431,7 @@ export default function Home() {
                     src="/project/bal.png"
                     alt="pack1"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover group-hover:scale-105 transition-all duration-300 object-center"
                   />
                 </motion.div>
                 <motion.div
@@ -448,7 +450,7 @@ export default function Home() {
                     src="/project/study.png"
                     alt="pack1"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover group-hover:scale-105 transition-all duration-300 object-center"
                   />
                 </motion.div>
               </div>
