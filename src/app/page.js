@@ -359,7 +359,7 @@ export default function Home() {
                 </motion.div> */}
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "10%" }}
-                  animate={{ opacity: 1, blur: 0, y: 0 }}
+                  whileInView={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
                     type: "spring",
                     stiffness: 300, // higher = faster, snappier
@@ -376,30 +376,63 @@ export default function Home() {
                     className="object-cover group-hover:scale-120 transition-all duration-300 object-center  z-20  "
                   />
                 </motion.div>
-                <div className="w-full cursor-pointer aspect-4/3 relative overflow-hidden rounded-md bg-white">
+                <motion.div
+                  initial={{ opacity: 0, blur: 10, y: "10%" }}
+                  whileInView={{ opacity: 1, blur: 0, y: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 1.1,
+                  }}
+                  viewport={{ amount: 0, once: true }}
+                  className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"
+                >
                   <Image
                     src="/project/pack.png"
                     alt="pack1"
                     fill
                     className="object-cover object-center"
                   />
-                </div>
-                <div className="w-full cursor-pointer aspect-4/3 relative overflow-hidden rounded-md bg-white">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, blur: 10, y: "10%" }}
+                  whileInView={{ opacity: 1, blur: 0, y: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 0.1,
+                  }}
+                  viewport={{ amount: 0, once: true }}
+                  className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"
+                >
                   <Image
                     src="/project/bal.png"
                     alt="pack1"
                     fill
                     className="object-cover object-center"
                   />
-                </div>{" "}
-                <div className="w-full cursor-pointer aspect-4/3 relative overflow-hidden rounded-md bg-white">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, blur: 10, y: "10%" }}
+                  whileInView={{ opacity: 1, blur: 0, y: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 0.2,
+                  }}
+                  viewport={{ amount: 0, once: true }}
+                  className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"
+                >
                   <Image
                     src="/project/study.png"
                     alt="pack1"
                     fill
                     className="object-cover object-center"
                   />
-                </div>
+                </motion.div>
               </div>
 
               <div ref={textRef} className="h-[300vh]">
