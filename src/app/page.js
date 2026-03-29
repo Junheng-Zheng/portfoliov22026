@@ -265,7 +265,7 @@ export default function Home() {
                       type: "spring",
                       stiffness: 400, // higher = faster, snappier
                       damping: 60, // lower = more bounce
-                      delay: 0.6,
+                      delay: 0.8,
                     }}
                     viewport={{ amount: 0, once: true }}
                     className="flex gap-3 h-fit w-fit"
