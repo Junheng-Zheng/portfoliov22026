@@ -391,6 +391,14 @@ export default function Home() {
                     fill
                     className="object-cover object-center"
                   />
+                </div>{" "}
+                <div className="w-full cursor-pointer aspect-4/3 relative overflow-hidden rounded-md bg-white">
+                  <Image
+                    src="/project/study.png"
+                    alt="pack1"
+                    fill
+                    className="object-cover object-center"
+                  />
                 </div>
               </div>
 
