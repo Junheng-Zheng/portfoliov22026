@@ -214,9 +214,22 @@ export default function Home() {
               </div>
               <div className="flex relative flex-col md:flex-row justify-between gap-4  w-full">
                 {/* <Juntext /> */}
-                <h1 className="text-[44px] spacegrotesk leading-none md:text-5xl block md:hidden font-medium tracking-tight uppercase">
-                  Junheng Zheng
-                </h1>
+                <div className="w-full h-fit overflow-hidden block md:hidden ">
+                  <motion.h1
+                    initial={{ opacity: 0, y: "100%" }}
+                    whileInView={{ opacity: 1, blur: 0, y: 0 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400, // higher = faster, snappier
+                      damping: 60, // lower = more bounce
+                      delay: 0.4,
+                    }}
+                    viewport={{ amount: 0, once: true }}
+                    className="text-[44px] spacegrotesk leading-none md:text-5xl font-medium tracking-tight uppercase"
+                  >
+                    Junheng Zheng
+                  </motion.h1>
+                </div>
                 <div className="w-fit h-fit overflow-hidden">
                   <motion.p
                     initial={{ opacity: 0, blur: 10, y: "100%" }}

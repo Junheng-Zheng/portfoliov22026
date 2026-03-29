@@ -4,7 +4,7 @@ import AskeRandomizerGrid from "./AskeRandomizerGrid";
 
 const Footer = () => {
   return (
-    <div className="w-full flex flex-col gap-14 pt-24 opacity-90 text-white uppercase spacemono relative bg-black text-sm">
+    <div className="w-full flex flex-col  overflow-hidden gap-14 pt-24 opacity-90 text-white uppercase spacemono relative bg-black text-sm">
       <AskeRandomizerGrid cols={120} rows={8} />
       {/* <div className="p-6 flex flex-col gap-6">
         <Juntext />

@@ -5,7 +5,7 @@ function ScrollRevealText({ children, progress }) {
   const totalChars = children.length;
 
   return (
-    <p className="xl:w-[300px] w-full px-4 flex flex-wrap leding-tight justify-center text-center">
+    <p className="xl:w-[300px] w-3/4 px-4 flex flex-wrap leding-tight justify-center text-center">
       {words.map((word, w) => (
         <span key={w} className="whitespace-nowrap mr-1">
           {word.split("").map((char, i) => {
