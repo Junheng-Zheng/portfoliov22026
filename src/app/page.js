@@ -95,9 +95,9 @@ export default function Home() {
   return (
     <motion.div className={`w-full  flex flex-row-reverse   geist text-base`}>
       <div
-        className={` bg-[#0a0a0a]  flex flex-col  overflow-hidden fixed h-dvh md:relative justify-between ${menuOpen ? " md:w-[240px] w-full p-6 md:pl-0  items-start" : "w-0"} transition-all duration-300 spacemono text-[16px]  right-0  z-20`}
+        className={` bg-[#0a0a0a]  flex flex-col  overflow-hidden fixed h-dvh md:relative justify-between ${menuOpen ? " md:w-[240px] w-full p-6 md:pl-0  items-start" : "w-0"} transition-all duration-300 spacemono text-[16px]  right-0  z-50`}
       >
-        <div className="flex w-full flex-col gap-3 items-start">
+        <div className="flex w-full  flex-col gap-3 items-start">
           <button
             onClick={() => {
               setMenuOpen(false);
