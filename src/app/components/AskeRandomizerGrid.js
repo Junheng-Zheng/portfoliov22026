@@ -51,7 +51,7 @@ export default function AskeRandomizerGrid({
         delay: 0.6,
       }}
       viewport={{ amount: 0, once: true }}
-      className={`absolute opacity-40 pointer-events-none w-full bottom-0 left-0 flex ${className}`}
+      className={`absolute opacity-32 pointer-events-none w-full bottom-0 left-0 flex ${className}`}
     >
       {Array.from({ length: cols }).map((_, col) => (
         <div key={col} className="flex shrink-0 flex-col items-center gap-0.5">
