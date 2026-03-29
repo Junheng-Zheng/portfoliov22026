@@ -347,7 +347,7 @@ export default function Home() {
                 </motion.div>
               </div>
             </div>
-            <div className="w-full h-full border-l  flex flex-col border-r border-white/10  ">
+            <div className="w-full h-full md:border-l  flex flex-col md:border-r border-white/10  ">
               <div className="w-full grid grid-cols-1 overflow-hidden  px-6  py-8 border-b border-white/10 h-fit relative  md:grid-cols-2 gap-8">
                 {/* <motion.div
                   initial={{ opacity: 0, blur: 10, y: "10%" }}
@@ -372,7 +372,7 @@ export default function Home() {
                 </motion.div> */}
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "10%" }}
-                  whileInView={{ opacity: 1, blur: 0, y: 0 }}
+                  animate={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
                     type: "spring",
                     stiffness: 300, // higher = faster, snappier
@@ -391,7 +391,7 @@ export default function Home() {
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "10%" }}
-                  whileInView={{ opacity: 1, blur: 0, y: 0 }}
+                  animate={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
                     type: "spring",
                     stiffness: 300, // higher = faster, snappier
