@@ -45,7 +45,7 @@ export default function AskeRandomizerGrid({
   return (
     <motion.div
       initial={{ opacity: 0, blur: 10, y: "100%" }}
-      whileInView={{ opacity: 0.4, blur: 0, y: 0 }}
+      animate={{ opacity: 0.4, blur: 0, y: 0 }}
       transition={{
         duration: 0.3,
         delay: 0.6,
