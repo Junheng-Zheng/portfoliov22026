@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import {
   PRESET_COLOR_CLASSES,
   PRESET_SYMBOLS,
@@ -10,25 +10,38 @@ import {
 } from "./askePresets";
 import { motion } from "framer-motion";
 
+/** Tailwind `md` breakpoint */
+const MD_MIN_WIDTH = "(min-width: 768px)";
+
 export default function AskeRandomizerGrid({
   cols = 12,
-  rows = 32,
+  /** Row count below `md` (mobile) */
+  rows = 4,
+  /** Row count at `md` and up; omit to use `rows` at all widths */
+  rowsMd,
   tickMs = DEFAULT_ASK_TICK_MS,
   cellClassName = "text-lg font-medium tracking-tight uppercase leading-none",
   className = "",
 }) {
-  const [cells, setCells] = useState(() => makeAskCells(cols, rows));
-  const isFirstLayout = useRef(true);
+  const [activeRows, setActiveRows] = useState(rows);
 
   useEffect(() => {
-    if (isFirstLayout.current) {
-      q;
-      isFirstLayout.current = false;
+    if (rowsMd === undefined) {
+      setActiveRows(rows);
       return;
     }
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setCells(makeAskCells(cols, rows));
-  }, [cols, rows]);
+    const mq = window.matchMedia(MD_MIN_WIDTH);
+    const sync = () => setActiveRows(mq.matches ? rowsMd : rows);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, [rows, rowsMd]);
+
+  const [cells, setCells] = useState(() => makeAskCells(cols, rows));
+
+  useEffect(() => {
+    setCells(makeAskCells(cols, activeRows));
+  }, [cols, activeRows]);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -40,7 +53,7 @@ export default function AskeRandomizerGrid({
       );
     }, tickMs);
     return () => clearInterval(id);
-  }, [tickMs, cols, rows]);
+  }, [tickMs, cols, activeRows]);
 
   return (
     <motion.div
@@ -55,10 +68,10 @@ export default function AskeRandomizerGrid({
     >
       {Array.from({ length: cols }).map((_, col) => (
         <div key={col} className="flex shrink-0 flex-col items-center gap-0.5">
-          {Array.from({ length: rows }).map((_, row) => {
-            const idx = col * rows + row;
+          {Array.from({ length: activeRows }).map((_, row) => {
+            const idx = col * activeRows + row;
             const cell = cells[idx];
-            const rowOpacity = rows > 1 ? row / (rows - 1) : 1;
+            const rowOpacity = activeRows > 1 ? row / (activeRows - 1) : 1;
             if (!cell) return null;
             return (
               <span
