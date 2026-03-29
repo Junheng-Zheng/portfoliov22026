@@ -424,7 +424,7 @@ export default function Home() {
                     damping: 60, // lower = more bounce
                     delay: 0.1,
                   }}
-                  viewport={{ amount: 0, once: true }}
+                  viewport={{ amount: 0.3, once: true }}
                   className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"
                 >
                   <Image
@@ -443,7 +443,7 @@ export default function Home() {
                     damping: 60, // lower = more bounce
                     delay: 0.2,
                   }}
-                  viewport={{ amount: 0, once: true }}
+                  viewport={{ amount: 0.3, once: true }}
                   className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"
                 >
                   <Image
