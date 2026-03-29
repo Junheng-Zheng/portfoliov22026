@@ -396,17 +396,53 @@ export default function Home() {
               </div>
             </div>
             <div className="w-fit spacemono sticky px-12 py-8 top-0 justify-end items-end h-dvh   text-white uppercase text-sm flex-col flex  gap-4">
-              <div className="flex items-center gap-1">
-                <ArrowUpRight className="inline-block w-4 h-4 " />
-                <p>Email</p>
+              <div className="overflow-hidden">
+                <motion.div
+                  initial={{ opacity: 0, blur: 10, y: "100%" }}
+                  whileInView={{ opacity: 1, blur: 0, y: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 0.2,
+                  }}
+                  className="flex items-center  cursor-pointer  group gap-1"
+                >
+                  <ArrowUpRight className="inline-block w-4 h-4 group-hover:rotate-45 transition-all duration-300" />
+                  <p>Email</p>
+                </motion.div>
               </div>
-              <div className="flex items-center gap-1">
-                <ArrowUpRight className="inline-block w-4 h-4 " />
-                <p>Resume</p>
+              <div className="overflow-hidden">
+                <motion.div
+                  initial={{ opacity: 0, blur: 10, y: "100%" }}
+                  whileInView={{ opacity: 1, blur: 0, y: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 0.4,
+                  }}
+                  className="flex items-center  cursor-pointer  group gap-1"
+                >
+                  <ArrowUpRight className="inline-block w-4 h-4 group-hover:rotate-45 transition-all duration-300" />
+                  <p>Resume</p>
+                </motion.div>
               </div>
-              <div className="flex items-center gap-1">
-                <ArrowUpRight className="inline-block w-4 h-4 " />
-                <p>LinkedIn</p>
+              <div className="overflow-hidden">
+                <motion.div
+                  initial={{ opacity: 0, blur: 10, y: "100%" }}
+                  whileInView={{ opacity: 1, blur: 0, y: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 0.6,
+                  }}
+                  className="flex items-center  cursor-pointer  group gap-1"
+                >
+                  <ArrowUpRight className="inline-block w-4 h-4 group-hover:rotate-45 transition-all duration-300" />
+                  <p>LinkedIn</p>
+                </motion.div>
               </div>
             </div>
           </div>
