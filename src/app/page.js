@@ -93,11 +93,7 @@ export default function Home() {
   }, [progressValue, unlocked, delay]);
 
   return (
-    <motion.div
-      initial={{ maxHeight: "100dvh" }}
-      animate={{ maxHeight: "auto" }}
-      className={`w-full  flex flex-row-reverse  ${unlocked ? "overflow-visible" : "overflow-hidden"} geist text-base`}
-    >
+    <motion.div className={`w-full  flex flex-row-reverse   geist text-base`}>
       <div
         className={` bg-[#0a0a0a]  flex flex-col  overflow-hidden fixed h-dvh md:relative justify-between ${menuOpen ? " md:w-[240px] w-full p-6 md:pl-0  items-start" : "w-0"} transition-all duration-300 spacemono text-[16px]  right-0  z-20`}
       >
@@ -111,36 +107,51 @@ export default function Home() {
             <div className="w-full group-hover:bg-white/5 scale-150 rounded-sm  aspect-square top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute"></div>
             <X />
           </button>
-          <Link
-            href="mailto:jz7259@g.rit.edu"
-            className="spacegrotesk text-3xl mt-3 w-full font-medium hover:italic"
-          >
-            EMAIL
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/junhengzheng/"
-            className="spacegrotesk text-3xl  w-full font-medium hover:italic"
-          >
-            LINKEDIN
-          </Link>
-          <Link
-            href="/resume.pdf"
-            className="spacegrotesk text-3xl w-full font-medium hover:italic"
-          >
-            RESUME
-          </Link>
-          <Link
-            href="https://dribbble.com/junheng-zheng"
-            className="spacegrotesk text-3xl w-full font-medium hover:italic"
-          >
-            DRIBBBLE
-          </Link>
-          <Link
-            href="https://github.com/Junheng-Zheng?tab=overview&from=2022-12-01&to=2022-12-31"
-            className="spacegrotesk text-3xl w-full font-medium hover:italic"
-          >
-            GITHUB
-          </Link>
+          <div className="group cursor-pointer items-center flex hover:gap-1">
+            <ArrowUpRight className="inline-block mt-3 w-0 h-0 group-hover:w-7 group-hover:h-7 transition-all duration-300" />
+            <Link
+              href="mailto:jz7259@g.rit.edu"
+              className="spacegrotesk  text-3xl mt-3 w-full font-medium hover:italic"
+            >
+              EMAIL
+            </Link>
+          </div>
+          <div className="group cursor-pointer items-center flex hover:gap-1">
+            <ArrowUpRight className="inline-block w-0 h-0 group-hover:w-7 group-hover:h-7 transition-all duration-300" />
+            <Link
+              href="https://www.linkedin.com/in/junhengzheng/"
+              className="spacegrotesk text-3xl  w-full font-medium hover:italic"
+            >
+              LINKEDIN
+            </Link>
+          </div>
+          <div className="group cursor-pointer items-center flex hover:gap-1">
+            <ArrowUpRight className="inline-block w-0 h-0 group-hover:w-7 group-hover:h-7 transition-all duration-300" />
+            <Link
+              href="/resume.pdf"
+              className="spacegrotesk text-3xl w-full font-medium hover:italic"
+            >
+              RESUME
+            </Link>
+          </div>
+          <div className="group cursor-pointer items-center flex hover:gap-1">
+            <ArrowUpRight className="inline-block w-0 h-0 group-hover:w-7 group-hover:h-7 transition-all duration-300" />
+            <Link
+              href="https://github.com/Junheng-Zheng?tab=overview&from=2022-12-01&to=2022-12-31"
+              className="spacegrotesk text-3xl w-full font-medium hover:italic"
+            >
+              GITHUB
+            </Link>
+          </div>
+          <div className="group cursor-pointer items-center flex hover:gap-1">
+            <ArrowUpRight className="inline-block w-0 h-0 group-hover:w-7 group-hover:h-7 transition-all duration-300" />
+            <Link
+              href="https://dribbble.com/junheng-zheng"
+              className="spacegrotesk text-3xl w-full font-medium hover:italic"
+            >
+              DRIBBBLE
+            </Link>
+          </div>
         </div>
         <div className="flex w-full spacemono text-[10px] uppercase flex-col gap-1 border-t border-white/50 opacity-20  pt-3 items-start">
           <p>[Figma, React, Tailwind, Javascript, Framer Motion, Vercel]</p>
@@ -186,7 +197,7 @@ export default function Home() {
                   </button>
                 </motion.div>
               </div>
-              <div className="w-full h-fit overflow-hidden">
+              <div className="w-full h-fit overflow-hidden hidden md:block  ">
                 <motion.div
                   initial={{ opacity: 0, y: "100%" }}
                   whileInView={{ opacity: 1, blur: 0, y: 0 }}
@@ -269,7 +280,7 @@ export default function Home() {
             </div>
           </div>
           <div className=" border-t border-b border-white/10 flex ">
-            <div className="w-fit spacemono sticky px-12 py-8 top-0 h-fit   text-white uppercase text-sm flex-col flex  gap-4">
+            <div className="w-fit spacemono sticky px-12 py-8 top-0 h-fit   text-white uppercase text-sm flex-col hidden md:flex  gap-4">
               <div className="w-full h-fit overflow-hidden">
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "100%" }}
@@ -325,7 +336,7 @@ export default function Home() {
             </div>
             <div className="w-full h-full border-l  flex flex-col border-r border-white/10  ">
               <div className="w-full grid grid-cols-1 overflow-hidden  px-6  py-8 border-b border-white/10 h-fit relative  md:grid-cols-2 gap-8">
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0, blur: 10, y: "10%" }}
                   animate={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
@@ -345,7 +356,7 @@ export default function Home() {
                   />
 
                   <div className="absolute top-0 left-0 w-full h-full bg-white/90"></div>
-                </motion.div>
+                </motion.div> */}
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "10%" }}
                   animate={{ opacity: 1, blur: 0, y: 0 }}
@@ -395,7 +406,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-fit spacemono sticky px-12 py-8 top-0 justify-end items-end h-dvh   text-white uppercase text-sm flex-col flex  gap-4">
+            <div className="w-fit spacemono sticky px-12 py-8 top-0 justify-end items-end h-dvh   text-white uppercase text-sm flex-col  hidden md:flex  gap-4">
               <div className="overflow-hidden">
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "100%" }}
