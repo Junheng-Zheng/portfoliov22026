@@ -167,8 +167,8 @@ export default function Home() {
             <div className="w-full h-full bg-black/20 absolute top-0 left-0 pointer-events-none rounded-lg  z-10 "></div>
           )}
 
-          <div className=" flex flex-col overflow-hidden pt-8  bg-black/90 items-center relative ">
-            <div className="flex relative px-4 md:px-12 flex-col gap-20 md:gap-14 pb-20 md:pb-14 w-full">
+          <div className=" flex flex-col overflow-hidden pt-9  bg-black/90 items-center relative ">
+            <div className="flex relative px-4 md:px-12 flex-col gap-20 md:gap-10 pb-20 md:pb-14 w-full">
               <div className="w-full h-fit overflow-hidden">
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "100%" }}
