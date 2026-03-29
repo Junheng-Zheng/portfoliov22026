@@ -289,7 +289,7 @@ export default function Home() {
                   </motion.div>
                 </div>
               </div>
-              <AskeRandomizerGrid cols={80} rows={4} rowsMd={8} />
+              <AskeRandomizerGrid cols={120} rows={4} rowsMd={6} />
             </div>
           </div>
           <div className=" border-t border-b border-white/10 flex ">
