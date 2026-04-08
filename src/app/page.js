@@ -414,7 +414,7 @@ export default function Home() {
                   </Link>
                   <div className="w-full flex flex-col gap-2">
                     <p className="text-xs spacegrotesk opacity-80">
-                      UX Designer @ LMI ✦ 5 Min Read
+                      UI/UX Engineer @ LMI ✦ 5 Min Read
                     </p>
                     <p className=" w-full md:w-2/3 opacity-85">
                       Consolidating Internal Design Inconsistencies into a
@@ -451,7 +451,7 @@ export default function Home() {
                   </Link>
                   <div className="w-full flex flex-col gap-2">
                     <p className="text-xs spacegrotesk opacity-80">
-                      Design Engineer @ Tiger Snack Box ✦ 5 Min Read
+                      UI/UX Designer @ Tiger Snack Box ✦ 5 Min Read
                     </p>
                     <p className=" w-full md:w-2/3 opacity-85">
                       Spearheading the design of a new mobile game for Tiger
