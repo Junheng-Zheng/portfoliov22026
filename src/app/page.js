@@ -439,7 +439,7 @@ export default function Home() {
                   className="w-full h-full flex flex-col gap-3"
                 >
                   <Link
-                    href="/works/liberty-mutual"
+                    href="/works/pack"
                     className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"
                   >
                     <Image
