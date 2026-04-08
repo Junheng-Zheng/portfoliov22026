@@ -26,14 +26,13 @@ const Pack = () => {
   return (
     <div className="p-12 flex flex-col items-center gap-24">
       <div className="flex flex-col w-1/2  gap-4">
-        {/* <Link
+        <Link
           href="/"
-          target="_blank"
-          className="hover:italic px-3 w-fit py-2 gap-1 border flex text-xs items-center justify-center border-white/20 rounded-sm bg-black spacemono text-sm uppercase "
+          className="hover:italic gap-1 w-fit opacity-50 hover:opacity-100 flex items-center justify-center  bg-black spacemono text-sm uppercase "
         >
           <ArrowUpLeft className="inline-block w-4 h-4 t" />
-          Back to Home
-        </Link> */}
+          Back
+        </Link>
         <h1 className="text-4xl font-medium spacegrotesk uppercase">
           Consolidating Internal Design Inconsistencies into a Unified System @
           Liberty Mutual
@@ -50,6 +49,29 @@ const Pack = () => {
           />
         </div>
       </div>
+      <div className="flex p-12 bg-white/5 flex-col gap-4 w-1/2">
+        <p className="opacity-70 text-sm spacegrotesk">
+          Internal Enterpise Work
+        </p>
+        <p>
+          For the full process, please send me a message for the password to
+          access the full case study.
+        </p>
+        <div className="flex rounded-sm overflow-hidden">
+          <input
+            type="text"
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter Password"
+            className="w-full bg-black  px-3 py-2 focus:outline-none focus:ring-0 "
+          />
+          <button
+            onClick={handleSubmit}
+            className="border-l border-white/20 hover:italic cursor-pointer text-white px-3 py-2 z-2 bg-black  "
+          >
+            Access
+          </button>
+        </div>
+      </div>
       <div className="flex flex-col gap-4 w-1/2">
         <p className="opacity-70 text-sm spacegrotesk">Synopsis</p>
         <p>
@@ -62,8 +84,9 @@ const Pack = () => {
         <p className="opacity-70 text-sm spacegrotesk">What I Learned</p>
         <p>
           I walked away with a deeper understanding of designing and creating
-          components at scale. Utilizing efficient Autolayouts and variables
-          when designing components and utilizing
+          components at scale. From utilizing efficient autolayouts and
+          variables when designing components and utilizing, to developing
+          components in React that were both intuitive and responive.
         </p>
       </div>
     </div>
