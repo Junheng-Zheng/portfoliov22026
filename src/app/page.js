@@ -170,7 +170,7 @@ export default function Home() {
           )}
 
           <div className=" flex flex-col overflow-hidden pt-9  bg-black/90 items-center relative ">
-            <div className="flex relative px-4 md:px-12 flex-col gap-20 md:gap-10 pb-20 md:pb-14 w-full">
+            <div className="flex relative px-5 md:px-12 flex-col gap-20 md:gap-10 pb-20 md:pb-14 w-full">
               <div className="w-full h-fit overflow-hidden">
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "100%" }}
@@ -184,8 +184,8 @@ export default function Home() {
                   viewport={{ amount: 0, once: true }}
                   className="flex justify-between w-full items-center gap-4"
                 >
-                  <div className=" spacegrotesk px-3 py-1 text-sm border border-white/20 rounded-full flex items-center ">
-                    JZ <Minus className="inline-block w-3 h-3 " />{" "}
+                  <div className=" spacegrotesk gap-1 px-3 py-1 text-sm border border-white/20 rounded-full flex items-center ">
+                    JUN
                     <Copyright className="inline-block w-3 h-3 " />
                   </div>
                   <button
@@ -214,7 +214,7 @@ export default function Home() {
                   <Juntext />
                 </motion.div>
               </div>
-              <div className="flex relative flex-col md:flex-row justify-between gap-4  w-full">
+              <div className="flex relative flex-col md:flex-row justify-between items-start  gap-4  w-full">
                 {/* <Juntext /> */}
                 <div className="w-full h-fit overflow-hidden block md:hidden ">
                   <motion.h1
@@ -245,11 +245,12 @@ export default function Home() {
                     viewport={{ amount: 0, once: true }}
                     className=" w-[300px] md:w-[360px] inline-block"
                   >
-                    Developer <ArrowRight className="inline-block w-4 h-4 " />{" "}
-                    with a keen <Eye className=" inline-block w-4 h-4 " /> for{" "}
+                    Frontend Developer{" "}
+                    <ArrowRight className="inline-block w-4 h-4 " /> with a keen{" "}
+                    <Eye className=" inline-block w-4 h-4 " /> for{" "}
                     <span className="inline-block">
                       des
-                      <Zap className=" inline-block w-4 h-4 " />
+                      <Zap className=" inline-block w-3 h-3 " />
                       gn.
                     </span>{" "}
                     Creating from 0{" "}
@@ -298,7 +299,7 @@ export default function Home() {
             <div className="w-fit spacemono sticky px-12 py-8 top-0 h-dvh   text-white uppercase text-sm flex-col hidden md:flex  gap-4">
               <div className="absolute top-0 left-0  pointer-events-none inset-0 flex justify-between">
                 {Array.from({ length: 20 }).map((_, index) => (
-                  <div key={index} className="w-px h-full bg-white/5"></div>
+                  <div key={index} className="w-px h-full bg-white/3"></div>
                 ))}
               </div>
               <div className="w-full h-fit overflow-hidden">
@@ -318,6 +319,7 @@ export default function Home() {
                   <p>Works</p>
                 </motion.div>
               </div>
+
               <div className="w-full h-fit overflow-hidden">
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "100%" }}
@@ -332,10 +334,9 @@ export default function Home() {
                   className="flex items-center cursor-pointer group gap-1"
                 >
                   <ArrowUpRight className="inline-block w-4 h-4 group-hover:rotate-45 transition-all duration-300" />
-                  <p>Blog</p>
+                  <p>About</p>
                 </motion.div>
               </div>
-
               <div className="w-full h-fit overflow-hidden">
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "100%" }}
@@ -350,32 +351,43 @@ export default function Home() {
                   className="flex items-center cursor-pointer group gap-1"
                 >
                   <ArrowUpRight className="inline-block w-4 h-4 group-hover:rotate-45 transition-all duration-300" />
-                  <p>About</p>
+                  <p>Play</p>
                 </motion.div>
               </div>
             </div>
             <div className="w-full h-full md:border-l  flex flex-col md:border-r border-white/10  ">
-              <div className="w-full grid grid-cols-1 overflow-hidden  px-6  py-8 border-b border-white/10 h-fit relative  md:grid-cols-2 gap-8">
+              <div className="w-full grid grid-cols-1 overflow-hidden  px-5 md:px-6  py-8 border-b border-white/10 h-fit relative  md:grid-cols-2 gap-8">
                 {/* <motion.div
                   initial={{ opacity: 0, blur: 10, y: "10%" }}
                   animate={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
                     type: "spring",
-                    stiffness: 300, // higher = faster, snappier
-                    damping: 60, // lower = more bounce
-                    delay: 0.8,
+                    stiffness: 300,
+                    damping: 60,
+                    delay: 0.7,
                   }}
                   viewport={{ amount: 0, once: true }}
-                  className="w-full group cursor-pointer aspect-4/3  relative overflow-hidden rounded-md "
+                  className="w-full h-full flex flex-col gap-3"
                 >
-                  <Image
-                    src="/ibm.gif"
-                    alt="pack1"
-                    fill
-                    className="object-cover group-hover:scale-140 transition-all duration-300 object-center scale-120 z-20  "
-                  />
+                  <div className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100">
+                    <Image
+                      src="/ibmedit.gif"
+                      alt="pack1"
+                      fill
+                      className="object-cover group-hover:scale-110  scale-80 rounded-sm transition-all duration-300 object-center z-20  "
+                    />
 
-                  <div className="absolute top-0 left-0 w-full h-full bg-white/90"></div>
+                    <div className="absolute top-0 left-0 w-full h-full bg-[#0f62fe]"></div>
+                  </div>
+                  <div className="w-full flex flex-col gap-2">
+                    <p className="text-xs spacegrotesk opacity-70">
+                      Design Engineer @ IBM Research ✦ 5 Min Read
+                    </p>
+                    <p className=" w-full md:w-2/3 opacity-85">
+                      Reimagination and migration of an internal cloud tool at
+                      Apps@Research IBM team.
+                    </p>
+                  </div>
                 </motion.div> */}
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "10%" }}
@@ -384,17 +396,35 @@ export default function Home() {
                     type: "spring",
                     stiffness: 300, // higher = faster, snappier
                     damping: 60, // lower = more bounce
-                    delay: 0.8,
+                    delay: 0.7,
                   }}
                   viewport={{ amount: 0, once: true }}
-                  className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"
+                  className="w-full h-full flex flex-col gap-3"
                 >
-                  <Image
-                    src="/limi.gif"
-                    alt="pack1"
-                    fill
-                    className="object-cover group-hover:scale-105  transition-all duration-300 object-center  z-20  "
-                  />
+                  <Link
+                    href="/works/liberty-mutual"
+                    className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"
+                  >
+                    <Image
+                      src="/limi.gif"
+                      alt="pack1"
+                      fill
+                      className="object-cover group-hover:scale-105  transition-all duration-300 object-center  z-20  "
+                    />
+                  </Link>
+                  <div className="w-full flex flex-col gap-2">
+                    <p className="text-xs spacegrotesk opacity-80">
+                      UX Designer @ LMI ✦ 5 Min Read
+                    </p>
+                    <p className=" w-full md:w-2/3 opacity-85">
+                      Consolidating Internal Design Inconsistencies into a
+                      reusable design system, Enterprise UI.
+                    </p>
+                    {/* <div className="flex items-center cursor-pointer group gap-1">
+                      <ArrowUpRight className="inline-block w-4 h-4 group-hover:rotate-45 transition-all duration-300" />
+                      <p>Read Case Study</p>
+                    </div> */}
+                  </div>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, blur: 10, y: "10%" }}
@@ -403,9 +433,46 @@ export default function Home() {
                     type: "spring",
                     stiffness: 300, // higher = faster, snappier
                     damping: 60, // lower = more bounce
-                    delay: 0.9,
+                    delay: 0.8,
                   }}
                   viewport={{ amount: 0, once: true }}
+                  className="w-full h-full flex flex-col gap-3"
+                >
+                  <Link
+                    href="/works/liberty-mutual"
+                    className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"
+                  >
+                    <Image
+                      src="/project/pack.png"
+                      alt="pack1"
+                      fill
+                      className="object-cover group-hover:scale-105  transition-all duration-300 object-center  z-20  "
+                    />
+                  </Link>
+                  <div className="w-full flex flex-col gap-2">
+                    <p className="text-xs spacegrotesk opacity-80">
+                      Design Engineer @ Tiger Snack Box ✦ 5 Min Read
+                    </p>
+                    <p className=" w-full md:w-2/3 opacity-85">
+                      Spearheading the design of a new mobile game for Tiger
+                      Snack Box, PACK!
+                    </p>
+                    {/* <div className="flex items-center cursor-pointer group gap-1">
+                      <ArrowUpRight className="inline-block w-4 h-4 group-hover:rotate-45 transition-all duration-300" />
+                      <p>Read Case Study</p>
+                    </div> */}
+                  </div>
+                </motion.div>
+                {/* <motion.div
+                  initial={{ opacity: 0, blur: 10, y: "10%" }}
+                  whileInView={{ opacity: 1, blur: 0, y: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300, // higher = faster, snappier
+                    damping: 60, // lower = more bounce
+                    delay: 0.1,
+                  }}
+                  viewport={{ amount: 0.3, once: true }}
                   className="w-full group cursor-pointer aspect-4/3 relative overflow-hidden rounded-md  bg-gray-100"
                 >
                   <Image
@@ -414,8 +481,8 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-105 transition-all duration-300 object-center"
                   />
-                </motion.div>
-                <motion.div
+                </motion.div> */}
+                {/* <motion.div
                   initial={{ opacity: 0, blur: 10, y: "10%" }}
                   whileInView={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
@@ -433,8 +500,8 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-105 transition-all duration-300 object-center"
                   />
-                </motion.div>
-                <motion.div
+                </motion.div> */}
+                {/* <motion.div
                   initial={{ opacity: 0, blur: 10, y: "10%" }}
                   whileInView={{ opacity: 1, blur: 0, y: 0 }}
                   transition={{
@@ -452,7 +519,7 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-105 transition-all duration-300 object-center"
                   />
-                </motion.div>
+                </motion.div> */}
               </div>
 
               <div ref={textRef} className="h-[300vh]">
@@ -466,11 +533,62 @@ export default function Home() {
                   <Diagram progress={textScrollProgress} />
                 </div>
               </div>
+              {/* <div className="w-full grid grid-cols-5  p-6 gap-4">
+                <div className="col-span-2 w-full h-full bg-red-500  rounded-md aspect-4/3 relative overflow-hidden  ">
+                  <Image
+                    src="/30minstudy/study1.png"
+                    alt="packsnaps"
+                    fill
+                    className="w-full object-cover object-center bg-red-500 relative overflow-hidden  "
+                  />
+                </div>
+                <div className="col-span-1 w-full h-full bg-red-500  rounded-md aspect-4/3 relative overflow-hidden  ">
+                  <Image
+                    src="/30minstudy/study2.png"
+                    alt="packsnaps"
+                    fill
+                    className="w-full object-cover object-[40%_50%] bg-red-500 relative overflow-hidden  "
+                  />
+                </div>
+                <div className="col-span-2 w-full h-full bg-red-500  rounded-md aspect-4/3 relative overflow-hidden  ">
+                  <Image
+                    src="/30minstudy/bob.png"
+                    alt="packsnaps"
+                    fill
+                    className="w-full object-cover object-center bg-red-500 relative overflow-hidden  "
+                  />
+                </div>
+                <div className="col-span-1 w-full h-full bg-red-500  rounded-md aspect-4/3 relative overflow-hidden  ">
+                  <Image
+                    src="/30minstudy/study3.png"
+                    alt="packsnaps"
+                    fill
+                    className="w-full object-cover object-[50%_40%] bg-red-500 relative overflow-hidden  "
+                  />
+                </div>
+
+                <div className="col-span-2 row-span-2 w-full h-full bg-red-500  rounded-md aspect-4/3 relative overflow-hidden  ">
+                  <Image
+                    src="/30minstudy/proprio.png"
+                    alt="packsnaps"
+                    fill
+                    className="w-full object-cover object-center scale-110 relative overflow-hidden  "
+                  />
+                </div>
+                <div className="col-span-1 w-full h-full bg-red-500  rounded-md aspect-4/3 relative overflow-hidden  ">
+                  <Image
+                    src="/project/chat.png"
+                    alt="packsnaps"
+                    fill
+                    className="w-full object-cover object-center scale-110 relative overflow-hidden  "
+                  />
+                </div>
+              </div> */}
             </div>
             <div className="w-fit spacemono sticky px-12 py-8 top-0 justify-end items-end h-dvh   text-white uppercase text-sm flex-col  hidden md:flex  gap-4">
               <div className="absolute top-0 left-0  pointer-events-none inset-0 flex justify-between">
                 {Array.from({ length: 20 }).map((_, index) => (
-                  <div key={index} className="w-px h-full bg-white/5"></div>
+                  <div key={index} className="w-px h-full bg-white/3"></div>
                 ))}
               </div>
               <div className="overflow-hidden">
